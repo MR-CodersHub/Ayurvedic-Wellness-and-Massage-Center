@@ -619,3 +619,76 @@
 @media (max-width: 560px) {
   .about-people .grid.g3 > .card .card-body { padding: 18px; }
 }
+
+.therapies-collection .section-head { text-align: center; margin-inline: auto; }
+.therapies-collection .section-head .eyebrow { justify-content: center; }
+.therapies-collection .tabs { justify-content: center; }
+
+.therapies-collection .therapy-card { display: flex; flex-direction: column; text-align: left; }
+.therapies-collection .therapy-card .card-img { position: relative; }
+.therapies-collection .therapy-card .card-img::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(transparent, rgba(13, 45, 35, 0.28));
+  pointer-events: none;
+}
+.therapies-collection .tab-panel .grid { align-items: start; }
+.therapies-collection .therapy-card .card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+.therapies-collection .therapy-card .therapy-cat-label { margin-bottom: 6px; }
+.therapies-collection .therapy-card .h4 { margin: 0 0 10px; }
+.therapies-collection .therapy-card .card-body > p:not(.therapy-cat-label) { margin: 0; font-size: 0.86rem; line-height: 1.65; }
+.therapies-collection .therapy-card .card-meta { margin-top: 12px; margin-bottom: 12px; }
+.therapies-collection .therapy-card .card-foot { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 0; padding-top: 16px; }
+.therapies-collection .therapy-card .price { align-self: flex-start; }
+.therapies-collection .therapy-card .therapy-actions { display: flex; gap: 10px; }
+.therapies-collection .therapy-card .therapy-actions .btn { flex: 1; justify-content: center; padding-inline: 12px; }
+
+.therapy-quiz .container > .grid.g-feature,
+.therapy-faq .container > .grid.g-feature { align-items: center; }
+
+@media (max-width: 560px) {
+  .therapies-collection .therapy-card .card-body { padding: 18px; }
+}
+
+.therapy-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.therapy-fact { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease); }
+.therapy-fact:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-md); }
+.therapy-fact .fact-icon { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 14px; background: var(--bg-soft); color: var(--accent-deep); }
+.therapy-fact .fact-icon svg { width: 20px; height: 20px; }
+.therapy-fact .fact-copy { display: block; min-width: 0; }
+.therapy-fact b { display: block; font-family: var(--serif); font-size: 1.12rem; color: var(--brand); line-height: 1.15; }
+.therapy-fact small { display: block; margin-top: 3px; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+
+.ingredients-section .container > .grid.g-feature,
+.booking-faq-section .container > .grid.g-feature { align-items: center; }
+
+@media (max-width: 560px) {
+  .therapy-facts { gap: 8px; }
+  .therapy-fact { padding: 10px; gap: 8px; }
+  .therapy-fact .fact-icon { width: 34px; height: 34px; border-radius: 11px; }
+  .therapy-fact .fact-icon svg { width: 17px; height: 17px; }
+  .therapy-fact b { font-size: 0.95rem; }
+  .therapy-fact small { font-size: 0.6rem; letter-spacing: 0.03em; }
+}
+
+.therapy-visual { display: flex; flex-direction: column; gap: 14px; height: 100%; }
+.therapy-visual .media { flex: none; }
+.therapy-note { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-xl); background: var(--bg-soft); }
+.therapy-note .note-top { display: flex; align-items: flex-start; gap: 14px; }
+.therapy-note .note-icon { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); color: var(--accent-deep); }
+.therapy-note .note-icon svg { width: 22px; height: 22px; }
+.therapy-note b { display: block; font-family: var(--serif); font-size: 1.25rem; color: var(--brand); }
+.therapy-note p { margin-top: 6px; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; }
+.therapy-note .note-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.therapy-note .note-tags span { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 0.68rem; color: var(--ink-muted); }
+
+@media (max-width: 560px) {
+  .therapy-visual { gap: 10px; }
+  .therapy-note { padding: 18px; gap: 12px; }
+  .therapy-note .note-icon { width: 38px; height: 38px; border-radius: 12px; }
+  .therapy-note .note-icon svg { width: 19px; height: 19px; }
+  .therapy-note b { font-size: 1.08rem; }
+  .therapy-note p { font-size: 0.82rem; }
+}

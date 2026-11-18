@@ -235,6 +235,409 @@
   };
   $$('img').forEach(img => { img.addEventListener('error', () => fallback(img)); if (img.complete && img.naturalWidth === 0) fallback(img); });
 
+  const therapyDetails = {
+    abhyanga: {
+      name: 'Abhyanga',
+      eyebrow: 'Signature full-body ritual',
+      title: 'Abhyanga — the embrace of warm herbal oil.',
+      meta: 'Discover Abhyanga — a 90-minute warm herbal oil massage that calms the nervous system, nourishes tissue and restores natural balance.',
+      lead: 'A deeply restorative full-body massage that follows the body’s energy channels, nourishes the tissues and invites the nervous system into rest.',
+      image: '1600334129128-685c5582fd35',
+      detailImage: '1544367567-0f2fcb009e0b',
+      sectionTitle: 'More than a massage.',
+      intro: 'In Sanskrit, abhyanga means “oil massage.” But this ritual is far more than the word suggests. Warm herb-infused oil is applied with long, rhythmic strokes that move with the body’s natural flow — soothing the nervous system while renewing the skin and tissues.',
+      note: 'Your therapist adjusts pressure, oil and rhythm to your constitution. The result is a session that feels both deeply relaxing and remarkably revitalizing.',
+      benefits: ['Relieves tension', 'Improves sleep', 'Boosts circulation', 'Softens skin', 'Calms the mind', 'Supports lymphatic flow'],
+      duration: '90 minutes', oils: '4 oils', doshas: 'Vata & Pitta', price: '₹4,800',
+      process: [
+        ['Consultation & assessment', 'We begin with a conversation about your constitution, tension patterns and the outcome you want from the session.'],
+        ['Oil selection', 'Your therapist warms a freshly blended oil chosen for your dosha — sesame, coconut, almond or a herbal infusion.'],
+        ['The full-body ritual', 'Long, synchronized strokes move from head to toe, with focused attention on joints, marma points and areas of holding.'],
+        ['Rest & integration', 'You are given quiet time to rest, followed by herbal tea and simple aftercare guidance to extend the benefits.']
+      ],
+      ingredientsTitle: 'Oils blended with intention.',
+      ingredientsLead: 'We press and infuse our oils in small batches. Nothing is mass-produced, and nothing is chosen without regard for your constitution.',
+      ingredients: [
+        ['Sesame & Ashwagandha', 'Grounding and warm — ideal for Vata imbalance, dryness and restless sleep.'],
+        ['Coconut & Brahmi', 'Cooling and calming — chosen for Pitta heat, sensitivity and mental fatigue.'],
+        ['Almond & Turmeric', 'Nourishing and brightening — supports tissue health and a luminous complexion.'],
+        ['Neem & Sandalwood', 'Purifying and soothing — used for Kapha congestion and stressed skin.']
+      ],
+      faq: [
+        ['Is Abhyanga suitable for everyone?', 'Most people benefit greatly. We adjust the oil and pressure for pregnancy, sensitive skin and medical considerations — please tell us your details at booking.'],
+        ['How often should I have an Abhyanga?', 'Monthly is a wonderful starting rhythm. Weekly or fortnightly sessions are common during periods of stress or transition.'],
+        ['What should I wear?', 'You will be draped throughout. Disposable linen and a private changing space are provided.'],
+        ['Can I combine it with Shirodhara?', 'Yes — our Golden Hour ritual pairs the two for a more extended experience.']
+      ],
+      ctaTitle: 'Let this ritual find you.',
+      ctaText: 'Book your Abhyanga session and choose your preferred healer and time.'
+    },
+    shirodhara: {
+      name: 'Shirodhara',
+      eyebrow: 'Signature oil-pouring ritual',
+      title: 'Shirodhara — the stillness of warm oil.',
+      meta: 'Discover Shirodhara — a 75-minute warm oil pouring ritual that quietens the mind, eases tension and restores deep rest.',
+      lead: 'A gentle stream of warm herbal oil flows across the forehead, quietening mental chatter and guiding the senses into profound stillness.',
+      image: '1596755389378-c31d21fd1273',
+      detailImage: '1596755389378-c31d21fd1273',
+      sectionTitle: 'A stream of stillness.',
+      intro: 'Shirodhara means “flowing oil.” Warm oil is poured in a continuous, delicate line over the third eye, melting away mental fatigue and inviting the nervous system into a slower rhythm.',
+      note: 'The rhythm is adjusted to your breath and sensitivity. Many guests describe the experience as a gentle reset for a restless mind.',
+      benefits: ['Calms mental chatter', 'Eases head tension', 'Improves sleep', 'Supports focus', 'Balances Vata', 'Soothes the senses'],
+      duration: '75 minutes', oils: 'Warm herbal oil', doshas: 'Vata & Pitta', price: '₹5,400',
+      process: [
+        ['Consultation & assessment', 'We discuss sleep, stress and any head or neck tension before choosing the oil and flow.'],
+        ['Oil warming', 'Sesame or coconut oil is warmed gently and blended with calming herbs for your constitution.'],
+        ['The oil stream', 'A steady, delicate stream flows across the forehead while you rest in stillness.'],
+        ['Quiet integration', 'You are given time to rest, followed by herbal tea and simple aftercare notes.']
+      ],
+      ingredientsTitle: 'Oils chosen for calm.',
+      ingredientsLead: 'Every oil is selected for its ability to settle the mind without dulling the senses.',
+      ingredients: [
+        ['Sesame & Brahmi', 'Warm and grounding — supports deep sleep and a quiet mind.'],
+        ['Coconut & Rose', 'Cooling and soothing — ideal for heat, sensitivity and irritability.'],
+        ['Almond & Jatamansi', 'Nourishing and restorative — used for mental fatigue.'],
+        ['Neem & Sandalwood', 'Purifying and calming — eases tension and stressed skin.']
+      ],
+      faq: [
+        ['Is Shirodhara suitable for everyone?', 'Most people benefit. We adjust the temperature, flow and oil for sensitivity, pregnancy and medical considerations — please share your details at booking.'],
+        ['How often should I have Shirodhara?', 'A single session is deeply restorative. Fortnightly or monthly rituals help maintain calm during demanding periods.'],
+        ['Will the oil get into my eyes?', 'The flow is carefully guided across the forehead. You remain draped and comfortable, with a towel positioned for protection.'],
+        ['Can I combine it with Abhyanga?', 'Yes — our Golden Hour ritual pairs Abhyanga with Shirodhara for a more extended experience.']
+      ],
+      ctaTitle: 'Let stillness find you.',
+      ctaText: 'Book your Shirodhara session and choose your preferred healer and time.'
+    },
+    'herbal-steam': {
+      name: 'Herbal Steam',
+      eyebrow: 'Deep cleansing ritual',
+      title: 'Herbal Steam — breathe, soften, release.',
+      meta: 'Discover Herbal Steam — a 45-minute herbal steam therapy that opens the skin, clears the senses and releases deep tension.',
+      lead: 'Warm herbal vapour opens the pores, eases muscular tightness and leaves the skin refreshed and softly renewed.',
+      image: '1515377905703-c4788e51af15',
+      detailImage: '1515377905703-c4788e51af15',
+      sectionTitle: 'A cleanse you can feel.',
+      intro: 'Herbal Steam combines warm vapour with medicinal leaves and oils. The gentle heat encourages circulation, softens tension and supports the body’s natural cleansing process.',
+      note: 'Your therapist adjusts the blend and distance of the steam to keep the experience restorative, never overwhelming.',
+      benefits: ['Opens the skin', 'Eases muscle tension', 'Clears the senses', 'Supports circulation', 'Softens the skin', 'Encourages rest'],
+      duration: '45 minutes', oils: 'Herbal infusion', doshas: 'Kapha & Vata', price: '₹2,900',
+      process: [
+        ['Consultation & assessment', 'We check your skin sensitivity, breathing and any congestion before choosing the herbal blend.'],
+        ['Blend preparation', 'Leaves and oils are steeped in warm water to create a gentle, aromatic vapour.'],
+        ['The steam ritual', 'You rest beneath a canopy of warm herbal steam while your therapist guides slow breathing.'],
+        ['Cool-down & tea', 'A cool cloth and herbal tea close the ritual, leaving the skin calm and refreshed.']
+      ],
+      ingredientsTitle: 'Steam with purpose.',
+      ingredientsLead: 'Each infusion is chosen for the way it supports skin, breath and balance.',
+      ingredients: [
+        ['Eucalyptus & Neem', 'Clearing and purifying — supports easy breathing and clear skin.'],
+        ['Lavender & Rose', 'Calming and soothing — eases tension and sensitivity.'],
+        ['Turmeric & Tulsi', 'Warming and restorative — supports the body’s natural resilience.'],
+        ['Sandalwood & Mint', 'Cooling and refreshing — balances heat while gently decongesting.']
+      ],
+      faq: [
+        ['Is Herbal Steam suitable for sensitive skin?', 'We adjust the blend, temperature and distance of the steam. Please tell us about sensitivities at booking.'],
+        ['How often should I have a steam session?', 'Monthly is a lovely reset. During seasonal change or congestion, weekly sessions may be recommended.'],
+        ['What should I wear?', 'You will be draped comfortably. Disposable linen and a private changing space are provided.'],
+        ['Can I combine it with a massage?', 'Yes — Herbal Steam pairs beautifully with Abhyanga or Udvartana for a deeper cleanse.']
+      ],
+      ctaTitle: 'Let clarity find you.',
+      ctaText: 'Book your Herbal Steam session and choose your preferred healer and time.'
+    },
+    'panchakarma-detox': {
+      name: 'Panchakarma Detox',
+      eyebrow: 'Rejuvenating detox program',
+      title: 'Panchakarma — a guided return to balance.',
+      meta: 'Discover Panchakarma Detox — a 120-minute guided purification program that resets digestion and clears accumulated heaviness.',
+      lead: 'A carefully guided purification program that resets digestion, clears accumulated heaviness and restores lightness.',
+      image: '1556228720-195a672e8a03',
+      detailImage: '1618221195710-dd6b41faaea6',
+      sectionTitle: 'Reset, gently.',
+      intro: 'Panchakarma is a classical Ayurvedic program of preparation, warm oil therapy and gentle elimination. It is designed to clear what no longer serves the body while protecting your strength.',
+      note: 'Every step is adapted to your constitution, energy and digestion. Nothing is forced; the pace is always collaborative.',
+      benefits: ['Resets digestion', 'Clears heaviness', 'Supports metabolism', 'Restores energy', 'Calms the mind', 'Nourishes tissues'],
+      duration: '120 minutes', oils: 'Herbal oils', doshas: 'Kapha & Pitta', price: '₹8,900',
+      process: [
+        ['Consultation & assessment', 'We map your digestion, energy, sleep and constitution before designing your program.'],
+        ['Preparation & oleation', 'Warm oils and gentle therapies loosen accumulated tension and support the cleansing process.'],
+        ['Guided detoxification', 'A therapist-led sequence supports elimination while keeping you comfortable and nourished.'],
+        ['Rejuvenation & aftercare', 'Herbal tea, simple meals and a clear aftercare plan help you integrate the reset.']
+      ],
+      ingredientsTitle: 'Supportive by nature.',
+      ingredientsLead: 'The oils and herbs are chosen to nourish while they cleanse.',
+      ingredients: [
+        ['Sesame & Triphala', 'Warm and grounding — supports gentle elimination.'],
+        ['Coconut & Neem', 'Cooling and purifying — balances heat and supports skin.'],
+        ['Ghee & Ashwagandha', 'Nourishing and restorative — protects strength during reset.'],
+        ['Ginger & Tulsi', 'Warming and digestive — kindles a steady metabolic fire.']
+      ],
+      faq: [
+        ['Is Panchakarma suitable for everyone?', 'We tailor the program to your constitution and health history. Please share all medical details at booking so we can adapt it safely.'],
+        ['How often should I have a detox?', 'Many guests choose a seasonal reset. Your therapist will recommend a rhythm based on your goals and energy.'],
+        ['Will I need to fast?', 'No strict fasting is required. We suggest light, warm meals and will guide you through simple aftercare.'],
+        ['Can I combine it with other therapies?', 'Yes — we often pair Panchakarma with Abhyanga or Herbal Steam as part of a wider program.']
+      ],
+      ctaTitle: 'Let balance find you.',
+      ctaText: 'Book your Panchakarma Detox session and choose your preferred healer and time.'
+    },
+    'marma-therapy': {
+      name: 'Marma Therapy',
+      eyebrow: 'Energy-point therapy',
+      title: 'Marma — release where tension is held.',
+      meta: 'Discover Marma Therapy — a 60-minute focused energy-point treatment that releases tension and restores flow.',
+      lead: 'Focused work on vital energy points releases deep-seated tension and restores the body’s natural flow of energy.',
+      image: '1612817288484-6f916006741a',
+      detailImage: '1596462502278-27bfdc403348',
+      sectionTitle: 'Stillness at the points.',
+      intro: 'Marma therapy works with the body’s vital energy points. Gentle, precise pressure is held at specific sites to release holding, calm the nervous system and renew circulation.',
+      note: 'Pressure is always adapted to your sensitivity. The work is quiet, focused and deeply restorative.',
+      benefits: ['Releases tension', 'Restores energy flow', 'Calms the nervous system', 'Supports circulation', 'Eases stiffness', 'Improves body awareness'],
+      duration: '60 minutes', oils: 'Warm herbal oil', doshas: 'Vata & Kapha', price: '₹4,200',
+      process: [
+        ['Consultation & assessment', 'We locate areas of holding and discuss where you carry tension.'],
+        ['Oil preparation', 'A warm oil is chosen to soften tissue and support steady pressure.'],
+        ['Marma work', 'Precise points are held with gentle pressure, moving with your breath and comfort.'],
+        ['Integration', 'A short rest and herbal tea help the body settle into the new sense of space.']
+      ],
+      ingredientsTitle: 'Oils for steady flow.',
+      ingredientsLead: 'Blends are chosen to support circulation, warmth and a calm nervous system.',
+      ingredients: [
+        ['Sesame & Ashwagandha', 'Grounding and warm — supports steady energy.'],
+        ['Almond & Turmeric', 'Nourishing and brightening — supports tissue health.'],
+        ['Castor & Ginger', 'Warming and mobilising — eases stagnation.'],
+        ['Neem & Sandalwood', 'Soothing and cooling — balances sensitive skin.']
+      ],
+      faq: [
+        ['Is Marma Therapy suitable for everyone?', 'Yes, with adaptation. We adjust pressure for sensitivity, pregnancy and medical considerations — please tell us at booking.'],
+        ['How often should I have a session?', 'Fortnightly or monthly helps maintain ease. Weekly sessions can be supportive during periods of stress.'],
+        ['Is the pressure gentle?', 'Pressure is precise and adapted to your comfort. You can ask your therapist to lighten it at any point.'],
+        ['Can I combine it with Abhyanga?', 'Yes — Marma work pairs beautifully with Abhyanga for full-body release.']
+      ],
+      ctaTitle: 'Let release find you.',
+      ctaText: 'Book your Marma Therapy session and choose your preferred healer and time.'
+    },
+    udvartana: {
+      name: 'Udvartana',
+      eyebrow: 'Herbal powder massage',
+      title: 'Udvartana — awaken the body.',
+      meta: 'Discover Udvartana — a 60-minute herbal powder massage that stimulates circulation, supports metabolism and tones the skin.',
+      lead: 'A stimulating herbal powder massage that awakens circulation, supports metabolism and leaves the skin toned and refreshed.',
+      image: '1570172619644-dfd03ed5d881',
+      detailImage: '1620916566398-39f1143ab7be',
+      sectionTitle: 'Dry, warm, energising.',
+      intro: 'Udvartana uses warm herbal powders applied with firm, rhythmic strokes. The gentle friction supports lymphatic flow, tones the skin and kindles a steady sense of energy.',
+      note: 'The pressure is invigorating but never harsh. Your therapist adjusts the pace to your comfort and constitution.',
+      benefits: ['Supports metabolism', 'Tones the skin', 'Improves circulation', 'Eases heaviness', 'Supports lymphatic flow', 'Energises the body'],
+      duration: '60 minutes', oils: 'Herbal powders', doshas: 'Kapha & Vata', price: '₹3,900',
+      process: [
+        ['Consultation & assessment', 'We discuss energy, digestion and any areas of heaviness before selecting the powder.'],
+        ['Powder preparation', 'Herbal powders are warmed and blended for your constitution.'],
+        ['The massage', 'Firm, rhythmic strokes move across the body, awakening circulation and lymphatic flow.'],
+        ['Warm finish', 'A warm towel and herbal tea close the session, leaving the body light and toned.']
+      ],
+      ingredientsTitle: 'Powders with purpose.',
+      ingredientsLead: 'Each blend is chosen for its ability to tone, warm and gently stimulate.',
+      ingredients: [
+        ['Gram & Turmeric', 'Traditional and brightening — supports clear, toned skin.'],
+        ['Ginger & Black Pepper', 'Warming and stimulating — kindles circulation.'],
+        ['Neem & Tulsi', 'Purifying and balancing — supports skin clarity.'],
+        ['Sandalwood & Rose', 'Cooling and soothing — balances warmth and sensitivity.']
+      ],
+      faq: [
+        ['Is Udvartana suitable for sensitive skin?', 'We adjust the powder and pressure for sensitivity. Please tell us about skin conditions at booking.'],
+        ['How often should I have Udvartana?', 'Weekly or fortnightly sessions are common when working toward toning and renewed energy.'],
+        ['Will the powder feel gritty?', 'The powders are finely milled and warmed. The sensation is gently invigorating, never abrasive.'],
+        ['Can I combine it with a massage?', 'Yes — Udvartana pairs well with Abhyanga or Herbal Steam in a wider program.']
+      ],
+      ctaTitle: 'Let energy find you.',
+      ctaText: 'Book your Udvartana session and choose your preferred healer and time.'
+    },
+    nasya: {
+      name: 'Nasya',
+      eyebrow: 'Nasal oil therapy',
+      title: 'Nasya — clear the senses, calm the mind.',
+      meta: 'Discover Nasya — a 30-minute herbal oil therapy that clears the senses, eases congestion and calms the mind.',
+      lead: 'Herbal oil drops gently clear the senses, ease congestion and calm the mind in a short, focused ritual.',
+      image: '1512290923902-8a9f81dc236c',
+      detailImage: '1512290923902-8a9f81dc236c',
+      sectionTitle: 'A quiet clarity.',
+      intro: 'Nasya is the gentle administration of herbal oil through the nasal passages. It is used to clear congestion, sharpen the senses and settle mental restlessness.',
+      note: 'The drops are warm, mild and adjusted to your comfort. The session is brief but deeply clarifying.',
+      benefits: ['Clears congestion', 'Sharpens the senses', 'Calms the mind', 'Eases head tension', 'Supports sleep', 'Balances Vata'],
+      duration: '30 minutes', oils: 'Herbal oil drops', doshas: 'Vata & Kapha', price: '₹2,400',
+      process: [
+        ['Consultation & assessment', 'We discuss congestion, sinus comfort and any sensitivity before choosing the oil.'],
+        ['Oil warming', 'A gentle herbal oil is warmed to body temperature.'],
+        ['The drops', 'A few drops are administered while you rest with your head supported.'],
+        ['Rest & guidance', 'A short rest and simple aftercare guidance complete the ritual.']
+      ],
+      ingredientsTitle: 'Drops with intention.',
+      ingredientsLead: 'Only a few drops are needed — each one chosen for clarity and comfort.',
+      ingredients: [
+        ['Sesame & Tulsi', 'Warming and clearing — supports easy breathing.'],
+        ['Coconut & Brahmi', 'Cooling and calming — eases mental restlessness.'],
+        ['Almond & Turmeric', 'Nourishing and protective — supports delicate tissue.'],
+        ['Neem & Rose', 'Purifying and soothing — balances sensitivity.']
+      ],
+      faq: [
+        ['Is Nasya suitable for everyone?', 'We adjust the oil to your sensitivity and health history. Please share details at booking, especially during pregnancy or illness.'],
+        ['How often should I have Nasya?', 'A short course is often recommended during seasonal change or periods of congestion. Your therapist will advise.'],
+        ['Will it feel uncomfortable?', 'The drops are warm and mild. Most guests find the sensation gentle and clearing.'],
+        ['Can I combine it with Shirodhara?', 'Yes — Nasya pairs beautifully with Shirodhara for head and mind balance.']
+      ],
+      ctaTitle: 'Let clarity find you.',
+      ctaText: 'Book your Nasya session and choose your preferred healer and time.'
+    },
+    'pada-abhyanga': {
+      name: 'Pada Abhyanga',
+      eyebrow: 'Grounding foot ritual',
+      title: 'Pada Abhyanga — come back to the ground.',
+      meta: 'Discover Pada Abhyanga — a 45-minute warm-oil foot ritual that grounds the body, eases fatigue and calms the mind.',
+      lead: 'A grounding warm-oil foot massage that settles the body, eases fatigue and draws a busy mind back into the present.',
+      image: '1584132967334-10e028bd69f7',
+      detailImage: '1584132967334-10e028bd69f7',
+      sectionTitle: 'Rooted and restored.',
+      intro: 'Pada Abhyanga focuses on the feet and lower legs, where Ayurveda believes much of our grounding begins. Warm oil, steady pressure and gentle movement ease fatigue and invite the whole body to settle.',
+      note: 'The rhythm is slow and reassuring — ideal after travel, long days or periods of mental overload.',
+      benefits: ['Grounds the body', 'Eases foot fatigue', 'Calms the mind', 'Supports sleep', 'Improves circulation', 'Relieves tension'],
+      duration: '45 minutes', oils: 'Warm herbal oil', doshas: 'Vata & Pitta', price: '₹2,800',
+      process: [
+        ['Consultation & assessment', 'We discuss fatigue, travel and any foot or leg tension before choosing the oil.'],
+        ['Oil warming', 'A grounding oil is warmed and prepared for the feet and lower legs.'],
+        ['The foot ritual', 'Steady strokes and gentle pressure move through the feet, ankles and calves.'],
+        ['Rest & tea', 'A short rest and herbal tea close the grounding experience.']
+      ],
+      ingredientsTitle: 'Warmth from the ground up.',
+      ingredientsLead: 'Blends are chosen to calm, nourish and restore tired feet.',
+      ingredients: [
+        ['Sesame & Ashwagandha', 'Grounding and warm — eases restlessness.'],
+        ['Coconut & Rose', 'Cooling and soothing — balances heat and sensitivity.'],
+        ['Almond & Turmeric', 'Nourishing and brightening — supports tired skin.'],
+        ['Neem & Sandalwood', 'Purifying and calming — refresh and soften.']
+      ],
+      faq: [
+        ['Is Pada Abhyanga suitable for everyone?', 'Yes. We adjust pressure and oil for sensitivity, pregnancy and medical considerations — please tell us at booking.'],
+        ['How often should I have a foot ritual?', 'Weekly or fortnightly sessions are wonderful during busy or travel-heavy periods.'],
+        ['What should I wear?', 'Loose, comfortable clothing is ideal. Your feet and lower legs are draped throughout.'],
+        ['Can I combine it with Abhyanga?', 'Yes — it makes a gentle addition to a full-body Abhyanga session.']
+      ],
+      ctaTitle: 'Let grounding find you.',
+      ctaText: 'Book your Pada Abhyanga session and choose your preferred healer and time.'
+    },
+    'sound-oil-ceremony': {
+      name: 'Sound & Oil Ceremony',
+      eyebrow: 'Ceremonial ritual',
+      title: 'Sound & Oil — rest in resonance.',
+      meta: 'Discover Sound & Oil Ceremony — a 90-minute ceremonial ritual combining warm oil, sound and stillness for deep restoration.',
+      lead: 'Warm oil and gentle sound weave together into a ceremonial ritual that carries the body into deep, resonant rest.',
+      image: '1545205597-3d9d02c29597',
+      detailImage: '1571902943202-507ec2618e8f',
+      sectionTitle: 'Where sound meets stillness.',
+      intro: 'This ceremony layers warm oil massage with gentle sound — singing bowls, chimes and silence. Vibrations soften holding while the oil nourishes the tissues, creating a deeply restorative experience.',
+      note: 'The soundscape is kept gentle and responsive. Your therapist adjusts the rhythm to your comfort and the pace of your breath.',
+      benefits: ['Deepens rest', 'Eases tension', 'Calms the mind', 'Supports emotional balance', 'Improves sleep', 'Restores energy'],
+      duration: '90 minutes', oils: 'Warm ceremonial oil', doshas: 'Vata & Pitta', price: '₹6,200',
+      process: [
+        ['Consultation & assessment', 'We discuss your stress, sleep and sensitivity to sound before shaping the ceremony.'],
+        ['Oil & sound preparation', 'A warm oil blend is chosen and the soundscape is prepared for your comfort.'],
+        ['The ceremony', 'Oil massage and gentle sound unfold together, moving between touch, tone and stillness.'],
+        ['Integration', 'A quiet rest and herbal tea allow the experience to settle.']
+      ],
+      ingredientsTitle: 'Blends for resonance.',
+      ingredientsLead: 'Warm oils and gentle tones are chosen to complement one another.',
+      ingredients: [
+        ['Sesame & Lavender', 'Grounding and calming — supports deep rest.'],
+        ['Coconut & Rose', 'Cooling and soothing — balances heat and sensitivity.'],
+        ['Almond & Sandalwood', 'Nourishing and serene — supports a quiet mind.'],
+        ['Neem & Tulsi', 'Purifying and clearing — refreshes the senses.']
+      ],
+      faq: [
+        ['Is Sound & Oil Ceremony suitable for everyone?', 'Yes. We keep the sound gentle and can adapt it for sound sensitivity. Please share your preferences at booking.'],
+        ['How often should I have this ceremony?', 'Monthly or fortnightly rituals are lovely for maintaining calm and restorative sleep.'],
+        ['What kind of sound is used?', 'Gentle singing bowls and chimes, used sparingly and always at a comfortable volume.'],
+        ['Can I combine it with Shirodhara?', 'Yes — the ceremony pairs beautifully with Shirodhara for extended stillness.']
+      ],
+      ctaTitle: 'Let resonance find you.',
+      ctaText: 'Book your Sound & Oil Ceremony session and choose your preferred healer and time.'
+    }
+  };
+
+  function initTherapyDetails() {
+    if (!location.pathname.endsWith('therapy-details.html')) return;
+    const slug = new URLSearchParams(location.search).get('therapy') || 'abhyanga';
+    const data = therapyDetails[slug] || therapyDetails.abhyanga;
+    const setText = (selector, value) => { const el = $(selector); if (el && value != null) el.textContent = value; };
+    const setImage = (selector, id, alt) => {
+      const img = $(selector); if (!img) return;
+      img.src = `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${selector.includes('hero') ? 1920 : 1200}&q=80`;
+      img.alt = alt;
+      img.dataset.seed = id;
+    };
+
+    document.title = `${data.name} Therapy Detail | Ayurveda Wellness & Massage Center`;
+    const desc = $('meta[name="description"]'); if (desc) desc.content = data.meta;
+    const ogTitle = $('meta[property="og:title"]'); if (ogTitle) ogTitle.content = `${data.name} Therapy Detail | Ayurveda Wellness`;
+    const ogDesc = $('meta[property="og:description"]'); if (ogDesc) ogDesc.content = data.meta;
+
+    setImage('.detail-hero-bg img', data.image, `${data.name} therapy session`);
+    setText('.detail-hero .eyebrow', data.eyebrow);
+    setText('.detail-hero h1', data.title);
+    setText('.detail-hero .lead', data.lead);
+
+    setText('.therapy-section .split-copy .h2', data.sectionTitle);
+    setText('.therapy-section .split-copy > p.lead', data.intro);
+    setText('.therapy-section .split-copy > p.soft', data.note);
+    $$('.benefit-grid .benefit-item').forEach((el, i) => { if (data.benefits[i]) el.lastChild.textContent = ` ${data.benefits[i]}`; });
+    $$('.therapy-fact').forEach((el, i) => {
+      const values = [[data.duration, 'Session duration'], [data.oils, 'Blended for you'], [data.doshas, 'Balances doshas'], [data.price, 'Per session']];
+      if (!values[i]) return;
+      const b = $('b', el), s = $('small', el);
+      if (b) b.textContent = values[i][0];
+      if (s) s.textContent = values[i][1];
+    });
+    setImage('.therapy-visual .media img', data.detailImage || data.image, `${data.name} therapy session`);
+
+    $$('.process-row').forEach((row, i) => {
+      const item = data.process[i]; if (!item) return;
+      const h = $('h4', row), p = $('p', row);
+      if (h) h.textContent = item[0];
+      if (p) p.textContent = item[1];
+    });
+
+    setText('.ingredients-section .h2', data.ingredientsTitle);
+    setText('.ingredients-section .lead', data.ingredientsLead);
+    $$('.ingredients-section .feature-card').forEach((card, i) => {
+      const item = data.ingredients[i]; if (!item) return;
+      const h = $('h3', card), p = $('p', card);
+      if (h) h.textContent = item[0];
+      if (p) p.textContent = item[1];
+    });
+
+    $$('.booking-faq-section .accordion-item').forEach((item, i) => {
+      const qa = data.faq[i]; if (!qa) return;
+      const head = $('.accordion-head', item), body = $('.accordion-body p', item);
+      if (head && head.firstChild) head.firstChild.textContent = qa[0];
+      if (body) body.textContent = qa[1];
+    });
+
+    setText('.cta-band h2', data.ctaTitle);
+    setText('.cta-band p', data.ctaText);
+    $$('[data-book]').forEach(btn => { btn.dataset.book = data.name; });
+  }
+
+  function initTherapyCards() {
+    if (!location.pathname.endsWith('therapies.html')) return;
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.therapy-card');
+      if (!card || e.target.closest('a, button, input, label, select, textarea')) return;
+      const href = $('a[href^="therapy-details.html?therapy="]', card)?.getAttribute('href');
+      if (href) location.href = href;
+    });
+  }
+
+  initTherapyDetails();
+  initTherapyCards();
+
   /* ---------- Booking wizard ---------- */
   const wizard = $('#booking-modal');
   let wizardState = { therapy: '', date: '', time: '', therapist: '' };
@@ -271,6 +674,7 @@
   function openWizard(therapy = '') {
     if (!wizard) return;
     wizardState = { therapy, date: '', time: '', therapist: '' };
+    if (therapy) selectOpt('therapy', therapy);
     calMonth = new Date().getMonth(); calYear = new Date().getFullYear();
     goStep(0); buildCalendar();
     wizard.classList.add('open'); document.body.classList.add('no-scroll');
