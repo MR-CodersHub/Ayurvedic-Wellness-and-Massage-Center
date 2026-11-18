@@ -539,3 +539,62 @@
   .home-quotes .quote-text { min-height: 9em; font-size: 1.08rem; margin: 10px 0 18px; }
   .home-quotes .quote-author { padding-top: 14px; }
 }
+
+.home2-thought .ornament { justify-content: center; }
+
+.home2-featured .ritual-highlight {
+  margin-top: 14px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.home2-featured .ritual-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.home2-featured .ritual-highlight-grid div {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 12px;
+  border-inline-start: 2px solid var(--accent);
+}
+.home2-featured .ritual-highlight-grid b { font-family: var(--serif); font-size: 1.05rem; color: var(--brand); }
+.home2-featured .ritual-highlight-grid span { font-size: 0.68rem; color: var(--ink-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.home2-featured .ritual-highlight > p { margin: 14px 0 0; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.65; }
+
+.home2-healers .therapist-card { display: flex; flex-direction: column; text-align: left; }
+.home2-healers .therapist-card .card-img { position: relative; }
+.home2-healers .therapist-card .card-img::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(transparent, rgba(13, 45, 35, 0.28));
+  pointer-events: none;
+}
+.home2-healers .therapist-card .card-img img { aspect-ratio: 4/3.35; }
+.home2-healers .therapist-card .card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+.home2-healers .therapist-card .card-body .h4 { margin: 8px 0 4px; }
+.home2-healers .healer-bio { margin: 10px 0 0; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.7; }
+.home2-healers .therapist-card .stars { display: flex; flex: 1; align-items: center; }
+.home2-healers .therapist-card .card-foot { margin-top: 18px; padding-top: 16px; }
+.home2-healers .therapist-card .btn { flex: none; }
+
+.home2-journal .container > .grid.g2 { align-items: center; }
+.home2-journal .grid.g2 > .card { display: flex; flex-direction: column; }
+.home2-journal .grid.g2 > .card .card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+.home2-journal .grid.g2 > .card .card-body p { margin: 10px 0 0; font-size: 0.82rem; line-height: 1.65; }
+.home2-journal .grid.g2 > .card .btn { align-self: flex-start; margin-top: 18px; padding: 11px 20px; }
+
+@media (max-width: 560px) {
+  .home2-featured .ritual-highlight { padding: 16px; }
+  .home2-featured .ritual-highlight-grid { grid-template-columns: 1fr; gap: 10px; }
+  .home2-featured .ritual-highlight-grid div { flex-direction: row; align-items: baseline; gap: 8px; }
+  .home2-healers .therapist-card .card-body,
+  .home2-journal .grid.g2 > .card .card-body { padding: 18px; }
+  .home2-healers .therapist-card .card-foot { flex-wrap: wrap; }
+}
