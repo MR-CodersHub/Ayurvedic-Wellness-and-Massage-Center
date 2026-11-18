@@ -211,3 +211,38 @@
   .info-strip .item { border-inline-end: 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .cta-band { text-align: center; justify-content: center; }
 }
+.home2-hero {
+  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  padding-block: clamp(24px, 5vh, 72px);
+}
+.home2-hero > .container { width: min(100% - (var(--gutter) * 2), var(--container)); }
+.home2-hero .split-visual { gap: clamp(20px, 4vw, 64px); }
+.home2-hero .visual-frame img { height: min(62vh, 620px); aspect-ratio: auto; }
+.home2-hero .split-copy .display { margin-top: clamp(8px, 1.8vh, 18px); font-size: clamp(2.25rem, min(5vw, 8.8vh), 4.4rem); }
+.home2-hero .split-copy .lead { font-size: clamp(0.95rem, min(1.2vw, 2.1vh), 1.05rem); line-height: 1.7; margin-top: clamp(12px, 2.4vh, 20px); }
+.home2-hero .split-copy .row { margin-top: clamp(16px, 3vh, 30px); flex-wrap: nowrap; }
+.home2-hero .split-copy .row .btn { white-space: nowrap; padding: 12px 18px; font-size: 0.82rem; }
+@media (max-width: 900px) {
+  .home2-hero { padding-block: clamp(20px, 3vh, 40px); }
+  .home2-hero .split-visual { gap: clamp(12px, 2.2vh, 24px); }
+  .home2-hero .visual-frame img { height: min(34vh, 300px); }
+  .home2-hero .visual-accent { width: 34%; inset-inline-end: -8px; bottom: -10px; border-width: 6px; }
+  .home2-hero .split-copy .display { font-size: clamp(2.1rem, min(9.4vw, 7.6vh), 3.2rem); }
+  .home2-hero .split-copy .row { flex-wrap: wrap; justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .home2-hero .split-copy .row { gap: 8px; }
+  .home2-hero .split-copy .row .btn { width: 100%; }
+}
+@media (max-width: 360px), (max-height: 640px) and (max-width: 560px) {
+  .home2-hero { padding-block: 14px; }
+  .home2-hero .split-visual { gap: 12px; }
+  .home2-hero .visual-frame img { height: min(24vh, 160px); }
+  .home2-hero .split-copy .display { margin-top: 8px; font-size: clamp(2.3rem, 9.6vw, 2.8rem); }
+  .home2-hero .split-copy .lead { margin-top: 8px; font-size: 0.88rem; line-height: 1.45; }
+  .home2-hero .split-copy .row { margin-top: 12px; gap: 6px; }
+  .home2-hero .split-copy .row .btn { padding-block: 9px; font-size: 0.7rem; }
+}
