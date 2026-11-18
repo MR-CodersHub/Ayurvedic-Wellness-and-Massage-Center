@@ -179,6 +179,8 @@
 .cta-band .h2 { color: #FBF6EA; max-width: 560px; }
 .cta-band p { color: rgba(244,237,224,0.7); margin-top: 12px; max-width: 500px; }
 .cta-band .pattern-overlay { opacity: 0.2; }
+.cta-band .btn-outline { border-color: rgba(244,237,224,0.72); color: #FBF6EA; background: transparent; }
+.cta-band .btn-outline:hover { border-color: #FBF6EA; color: var(--green-900); background: #FBF6EA; }
 
 /* ---------- Gallery / misc ---------- */
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
