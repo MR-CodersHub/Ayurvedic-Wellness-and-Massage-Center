@@ -12,11 +12,25 @@
   };
 
   /* ---------- Theme + direction ---------- */
-  const applyTheme = (t) => { document.documentElement.setAttribute('data-theme', t); store.set('ay-theme', t); };
+  const applyTheme = (t) => {
+    document.documentElement.setAttribute('data-theme', t);
+    store.set('ay-theme', t);
+    $$('.site-header [data-theme-toggle]').forEach(btn => {
+      const label = t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('aria-label', label);
+      btn.title = label;
+    });
+  };
   const applyDir = (d) => {
     document.documentElement.setAttribute('dir', d);
     document.documentElement.setAttribute('lang', d === 'rtl' ? 'ar' : 'en');
     store.set('ay-dir', d);
+    const label = d === 'ltr' ? 'RTL' : 'LTR';
+    $$('.site-header [data-dir-toggle] span').forEach(el => { el.textContent = label; });
+    $$('.site-header [data-dir-toggle]').forEach(btn => {
+      btn.title = `Switch to ${label}`;
+      btn.setAttribute('aria-label', `Switch to ${label}`);
+    });
   };
   applyTheme(store.get('ay-theme', 'light'));
   applyDir(store.get('ay-dir', 'ltr'));
@@ -24,12 +38,12 @@
   $$('[data-theme-toggle]').forEach(btn => btn.addEventListener('click', () => {
     const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     applyTheme(next);
-    toast(next === 'dark' ? 'Dark mode enabled' : 'Light mode enabled');
+    if (!btn.closest('.site-header')) toast(next === 'dark' ? 'Dark mode enabled' : 'Light mode enabled');
   }));
   $$('[data-dir-toggle]').forEach(btn => btn.addEventListener('click', () => {
     const next = document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
     applyDir(next);
-    toast(next === 'rtl' ? 'Right-to-left layout enabled' : 'Left-to-right layout enabled');
+    if (!btn.closest('.site-header')) toast(next === 'rtl' ? 'Right-to-left layout enabled' : 'Left-to-right layout enabled');
   }));
 
   /* ---------- Toast ---------- */
@@ -65,6 +79,28 @@
     const icon = $('.drawer-caret', btn);
     if (icon) icon.style.transform = btn.parentElement.classList.contains('open') ? 'rotate(180deg)' : '';
   }));
+
+  /* ---------- Profile menu ---------- */
+  const profileMenu = $('.profile-menu');
+  if (profileMenu) {
+    const toggle = $('[data-profile-toggle]', profileMenu);
+    const links = $$('.dropdown a', profileMenu);
+    const setOpen = (open) => {
+      profileMenu.classList.toggle('open', open);
+      if (toggle) toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle?.addEventListener('click', e => { e.stopPropagation(); setOpen(!profileMenu.classList.contains('open')); });
+    document.addEventListener('click', e => { if (!profileMenu.contains(e.target)) setOpen(false); });
+    document.addEventListener('focusin', e => { if (profileMenu.classList.contains('open') && !profileMenu.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && profileMenu.classList.contains('open')) { setOpen(false); toggle?.focus(); }
+      if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && document.activeElement === toggle) {
+        e.preventDefault(); setOpen(true);
+        (e.key === 'ArrowDown' ? links[0] : links[links.length - 1])?.focus();
+      }
+    });
+    links.forEach(link => link.addEventListener('click', () => setOpen(false)));
+  }
 
   /* ---------- Reveal ---------- */
   const revealObs = 'IntersectionObserver' in window
@@ -152,8 +188,10 @@
     required: v => v.trim().length > 0,
     email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
     phone: v => /^[\d\s+\-()]{7,20}$/.test(v.trim()),
-    min: (v, n) => v.trim().length >= n
+    min: (v, n) => v.trim().length >= n,
+    match: (v, sel) => { const other = sel && $(sel); return !!other && v.trim() === other.value.trim(); }
   };
+  window.ayValidators = validators;
   $$('form[data-validate]').forEach(form => form.addEventListener('submit', e => {
     e.preventDefault();
     let ok = true;
