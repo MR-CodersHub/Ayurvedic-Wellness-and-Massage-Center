@@ -863,9 +863,282 @@
     setText('.cta-band p', data.ctaText);
   }
 
+  const blogAuthors = {
+    'Dr. Ananya Sharma': { img: '1517841905240-472988babdf9', bio: 'Senior Ayurvedic therapist with fourteen years of practice in classical Abhyanga, Marma therapy and Panchakarma. Ananya writes about the small daily rituals that make wellness sustainable.' },
+    'Rohan Menon': { img: '1552058544-f2b08422138a', bio: 'Detox and herbal specialist with eleven years of clinical experience in Panchakarma and classical herbal medicine. Rohan writes about digestion, seasonality and steady, sustainable resets.' },
+    'Meera Iyer': { img: '1568602471122-7832951cc4c5', bio: 'Shirodhara and meditation therapist with nine years of practice. Meera writes about rest, breath and the quiet ways a busy mind learns to settle.' },
+    'Kabir Nair': { img: '1500648767791-00dcc994a43e', bio: 'Herbalist and therapist with twelve years of clinical practice. Kabir blends fresh powders and oils for each guest and writes about the plants behind the rituals.' },
+    'Devika Pillai': { img: '1531123897727-8f129e1688ce', bio: 'Wellness therapist specializing in grounding foot work, pregnancy care and gentle daily rituals. Devika writes about small practices that fit real family life.' }
+  };
+
+  const blogDetails = {
+    'daily-oiling': {
+      title: 'The quiet power of daily oiling.', category: 'Herbal wisdom', read: '6 min read', date: '12 March 2026', author: 'Dr. Ananya Sharma',
+      hero: '1426604966848-d7adac402bff', heroAlt: 'Herbal oils prepared for a daily ritual', detail: '1506744038136-46273834b3fb', detailAlt: 'Self oiling ritual at home',
+      lead: 'In Ayurveda, the day begins with a simple act of care: a little warm oil, applied with attention. It is such a small thing that it is easy to overlook — and yet, practiced consistently, it changes how the body feels and how the mind meets the morning.',
+      body: [
+        ['p', 'Abhyanga, or self-oiling, is one of the oldest daily rituals in Indian wellness traditions. The practice is uncomplicated: warm a small amount of oil, then massage it slowly over the body before bathing. The oil is chosen according to your constitution and the season.'],
+        ['h', 'Why the oil matters'],
+        ['p', 'Oil is not merely a lubricant in Ayurvedic thought. It is considered a carrier of nourishment — a way of delivering the qualities of herbs deep into the tissues. Sesame oil warmed with ashwagandha is grounding; coconut oil with brahmi is cooling and calm. The right oil depends on your dosha and the time of year.'],
+        ['q', 'The body remembers care. A few minutes of unhurried touch each morning tells it that it is safe to soften.'],
+        ['f', '1600585152915-d208bec867a1', 'Warm herbal oil in a traditional vessel', 'Warm herbal oil, prepared for a morning ritual.'],
+        ['h', 'A simple morning practice'],
+        ['p', 'Begin with a tablespoon of oil warmed gently between your palms. Start at the head, moving slowly down the body with long strokes over the limbs and circular motions at the joints. Pay particular attention to the soles of the feet, the scalp and the abdomen. Five to ten minutes is enough.'],
+        ['p', 'If a full-body ritual feels like too much, begin with the feet and hands alone. A practice that is small enough to repeat will always be more powerful than one that is ambitious and abandoned.'],
+        ['h', 'What you may notice'],
+        ['p', 'Regular self-oiling is traditionally said to support circulation, soften the skin, ease muscular stiffness and calm the nervous system. Many people find that it makes the transition from sleep into activity gentler.'],
+        ['p', 'It is also useful in dry weather, after travel and during periods of mental overactivity. In each case the principle is the same: warmth, oil and unhurried attention return the body to a sense of ease.']
+      ],
+      takeaways: ['Warm oil before bathing is a simple daily ritual', 'Choose the oil for your dosha and season', 'Five unhurried minutes are enough to begin', 'Consistency matters more than duration'],
+      tags: ['#Abhyanga', '#DailyRitual', '#HerbalOils', '#SelfCare', '#Dosha'],
+      homeTitle: 'Try the ritual tonight.', homeLead: 'You do not need a treatment room to begin. Three quiet minutes, a little warm oil and your full attention are enough.',
+      steps: [['Warm a spoonful of oil', 'Sesame or almond oil works beautifully. Warm it between your palms.'], ['Massage the soles', 'Slow circles on each foot, then long strokes up the legs.'], ['Rest before sleep', 'Let the oil absorb. Notice how the body settles.']],
+      cta: 'Experience the practice yourself.', ctaText: 'Book an Abhyanga session and learn the ritual from a master therapist.',
+      related: ['breath-practice', 'abhyanga-oils', 'sleep-healing'],
+      meta: 'Read The quiet power of daily oiling — a gentle guide to Abhyanga, warm herbal oils and a calmer daily rhythm.'
+    },
+    'monsoon-energy': {
+      title: 'Aligning your routine with monsoon energy.', category: 'Seasonal', read: '5 min read', date: '04 March 2026', author: 'Rohan Menon',
+      hero: '1470071459604-3b5ec3a7fe05', heroAlt: 'Misty monsoon landscape', detail: '1500534314209-a25ddb2bd429', detailAlt: 'Rain falling on a quiet window',
+      lead: 'When the rains arrive, the world grows heavier and slower. Ayurveda reads this as a shift in the doshas: Vata rises with the wind and movement, while Kapha gathers with the dampness. A few simple changes keep you steady through the season.',
+      body: [
+        ['p', 'Monsoon is a time of contrast. The air cools, the sky darkens and the body often asks for warmer food, longer sleep and a little more stillness. Fighting that rhythm usually leaves us tired. Working with it is far kinder.'],
+        ['h', 'Keep the inner fire steady'],
+        ['p', 'A settled digestive fire is your best companion in the rains. Favor warm, cooked meals with ginger, cumin and black pepper. Reduce cold drinks and raw foods, especially in the evenings, and give the stomach space between meals.'],
+        ['q', 'Seasonal care is not about doing more. It is about doing the right small things at the right time.'],
+        ['f', '1500534314209-a25ddb2bd429', 'Rain on a quiet window', 'The monsoon invites a slower, warmer rhythm.'],
+        ['h', 'A gentler daily rhythm'],
+        ['p', 'Wake a little later if you can, eat your largest meal at midday and keep dinner light. A short walk after food, warm oil on the soles of the feet and an early bedtime all help the body feel held rather than buffeted.']
+      ],
+      takeaways: ['Favor warm, cooked food with gentle spices', 'Keep evenings light and restful', 'Warm oil on the feet calms rising Vata', 'Move gently rather than pushing hard'],
+      tags: ['#Seasonal', '#Monsoon', '#Dosha', '#DailyRitual', '#Balance'],
+      homeTitle: 'Build a rain-day rhythm.', homeLead: 'A few small shifts make the monsoon feel grounding instead of heavy.',
+      steps: [['Warm your food', 'Add ginger, cumin and pepper to simple cooked meals.'], ['Oil the feet', 'A little warm sesame oil before bed settles Vata.'], ['Slow the evening', 'Keep dinner early and give yourself a quiet hour before sleep.']],
+      cta: 'Reset with the season.', ctaText: 'Ask our guides for a seasonal ritual suited to your constitution.',
+      related: ['kindling-agni', 'sunday-reset', 'daily-oiling'],
+      meta: 'Read Aligning your routine with monsoon energy — seasonal Ayurvedic guidance for warm food, steady digestion and calmer rains.'
+    },
+    'kindling-agni': {
+      title: 'The gentle art of kindling agni.', category: 'Herbal wisdom', read: '5 min read', date: '28 February 2026', author: 'Rohan Menon',
+      hero: '1596755094514-f87e34085b2c', heroAlt: 'Warm spices for digestion', detail: '1512621776951-a57141f2eefd', detailAlt: 'A warm spiced meal',
+      lead: 'Agni is the digestive fire that turns food into nourishment. When it is steady, we feel light and clear. When it flickers, we feel heavy, sluggish and oddly unsatisfied even after a full meal.',
+      body: [
+        ['p', 'In Ayurveda, good digestion is not measured by how much you can eat. It is measured by how well you transform what you take in. A gentle, regular fire is more valuable than an aggressive one.'],
+        ['h', 'Signs of a steady fire'],
+        ['p', 'You feel hungry at roughly the same time each day, your meals sit comfortably and your energy stays even through the afternoon. When agni is low, you may feel weighed down, sleepy after eating or drawn to constant snacking.'],
+        ['q', 'A happy digestive fire is quiet. You notice it most when it asks for nothing.'],
+        ['f', '1512621776951-a57141f2eefd', 'Warm spices and a nourishing bowl of food', 'Simple warm food kindles a steady appetite.'],
+        ['h', 'Small ways to stoke it'],
+        ['p', 'Start the day with warm water, eat at regular times and keep meals simple enough that your body can recognize them. A pinch of ginger, a little cumin and a short walk after lunch often do more than any elaborate cleanse.']
+      ],
+      takeaways: ['Eat at regular times, not whenever stress calls', 'Favor warm, simple, freshly cooked meals', 'Ginger and cumin support a steady fire', 'A short walk after food helps digestion'],
+      tags: ['#Agni', '#Digestion', '#HerbalWisdom', '#Food', '#Balance'],
+      homeTitle: 'Try a kindler at home.', homeLead: 'A simple cup of warm spiced water can be a gentle daily reset.',
+      steps: [['Boil warm water', 'Add a thin slice of ginger and a pinch of cumin seed.'], ['Sip slowly', 'Take it twenty minutes before your first meal.'], ['Keep it regular', 'Small daily signals matter more than occasional extremes.']],
+      cta: 'Meet your digestion.', ctaText: 'Speak to a guide about a digestion-focused ritual or herbal consultation.',
+      related: ['kitchen-spices', 'monsoon-energy', 'daily-oiling'],
+      meta: 'Read The gentle art of kindling agni — simple Ayurvedic ways to support digestion with warm food, spices and daily rhythm.'
+    },
+    'sleep-healing': {
+      title: 'Why sleep is a form of healing.', category: 'Rest', read: '7 min read', date: '21 February 2026', author: 'Meera Iyer',
+      hero: '1611892440504-42a792e24d32', heroAlt: 'Calm bedroom prepared for rest', detail: '1497366754035-f200968a6e72', detailAlt: 'A restful room prepared for sleep',
+      lead: 'Sleep is not the pause between the interesting parts of life. In Ayurveda it is one of the three pillars of health — a nightly repair in which the body settles, the mind unwinds and the nervous system remembers how to rest.',
+      body: [
+        ['p', 'We often treat sleep as something to squeeze in at the end of a full day. The body sees it differently. Darkness, stillness and regular timing tell every system that it is safe to slow down.'],
+        ['h', 'The hours before midnight'],
+        ['p', 'Ayurveda pays close attention to the early part of the night, when heavy, grounding qualities dominate. An early, consistent bedtime tends to feel deeper than the same number of hours gained later.'],
+        ['q', 'Rest is not a reward for finishing everything. It is what makes the next day possible.'],
+        ['f', '1497366754035-f200968a6e72', 'A calm, softly lit bedroom', 'A dark, quiet room is an invitation to rest.'],
+        ['h', 'Preparing the body for sleep'],
+        ['p', 'Dim the lights an hour before bed, keep screens away from the eyes if you can, and use warm oil on the soles of the feet or the scalp. A short breath practice by the bedside gives the mind one gentle thing to follow as the day closes.'],
+        ['p', 'If sleep is irregular, begin with timing rather than effort. The same wake-up time, seven days a week, slowly teaches the body when to release.'],
+      ],
+      takeaways: ['Sleep is one of Ayurveda’s three pillars of health', 'Earlier nights usually feel deeper', 'Warm oil and dim light signal safety', 'Consistent wake time matters most'],
+      tags: ['#Rest', '#Sleep', '#NervousSystem', '#EveningRitual', '#Shirodhara'],
+      homeTitle: 'Make tonight quieter.', homeLead: 'A short evening ritual can change the quality of your whole night.',
+      steps: [['Dim the room', 'Lower the lights an hour before bed and put screens away.'], ['Warm the soles', 'A little oil and a slow foot massage settle the body.'], ['Follow the breath', 'Count a few gentle cycles and let the mind land.']],
+      cta: 'Rest more deeply.', ctaText: 'Explore Shirodhara and guided rest sessions with our meditation therapist.',
+      related: ['breath-practice', 'three-minds', 'sunday-reset'],
+      meta: 'Read Why sleep is a form of healing — Ayurverdic guidance on early nights, warm rituals and a calmer nervous system.'
+    },
+    'kitchen-spices': {
+      title: 'Turmeric, ginger & the everyday kitchen.', category: 'Herbal wisdom', read: '4 min read', date: '14 February 2026', author: 'Kabir Nair',
+      hero: '1498837167922-ddd27525d352', heroAlt: 'Herbs and spices in the kitchen', detail: '1596755094514-f87e34085b2c', detailAlt: 'Warm spices ready for cooking',
+      lead: 'Ayurveda does not separate the kitchen from the medicine cabinet. Turmeric, ginger, cumin and pepper are everyday tools — chosen for the season, the meal and the person sitting at the table.',
+      body: [
+        ['p', 'The most useful herbs are usually the ones already in your kitchen. You do not need a shelf of obscure ingredients to begin. You need a little knowledge and a little attention.'],
+        ['h', 'Why ginger earns its place'],
+        ['p', 'Ginger warms, supports digestion and lends a bright edge to heavy foods. A thin slice in warm water before a meal is enough for most people. Those with a fiery constitution should use it more lightly.'],
+        ['q', 'A good herbal practice is quiet, edible and easy to repeat.'],
+        ['f', '1596755094514-f87e34085b2c', 'Turmeric, ginger and warm spices', 'Everyday spices are the beginning of herbal care.'],
+        ['h', 'Turmeric with a little black pepper'],
+        ['p', 'Turmeric is valued for its warming, clearing qualities. A pinch of black pepper is traditionally added to make it more available to the body. Stir both into warm milk, soups or lentils rather than chasing elaborate tonics.']
+      ],
+      takeaways: ['The kitchen is the first herbal cabinet', 'Ginger supports digestion and warmth', 'Black pepper helps turmeric do its work', 'Choose spices for your constitution'],
+      tags: ['#HerbalWisdom', '#Turmeric', '#Ginger', '#Kitchen', '#FoodAsCare'],
+      homeTitle: 'Open your spice drawer.', homeLead: 'One warm spice, used regularly, is a better foundation than a cupboard full of promises.',
+      steps: [['Choose one spice', 'Start with ginger for warmth or cumin for steadiness.'], ['Add it simply', 'Stir into warm water, soup or lentils.'], ['Notice the effect', 'Pay attention to comfort, appetite and energy over a week.']],
+      cta: 'Talk to our herbalist.', ctaText: 'Book a consultation and leave with a blend chosen for your constitution.',
+      related: ['kindling-agni', 'monsoon-energy', 'daily-oiling'],
+      meta: 'Read Turmeric, ginger & the everyday kitchen — practical Ayurvedic guidance on using common spices for daily balance.'
+    },
+    'three-minds': {
+      title: 'The three minds: understanding your thoughts.', category: 'Mind & rest', read: '6 min read', date: '08 February 2026', author: 'Meera Iyer',
+      hero: '1506126613408-eca07ce68773', heroAlt: 'Meditation and mindful thinking', detail: '1490645935967-10de6ba17061', detailAlt: 'A quiet moment of reflection',
+      lead: 'Ayurveda describes three modes of mind: sattva, rajas and tamas. They are not good or bad — they are qualities that move through us all day, shaping how we think, react and rest.',
+      body: [
+        ['p', 'A clear mind is not an empty one. It is a mind that can choose where to rest its attention. The three gunas offer a simple vocabulary for noticing what is happening without judging yourself for it.'],
+        ['h', 'Sattva, rajas and tamas'],
+        ['p', 'Sattva feels light, clear and settled. Rajas is restless and driven, full of plans and reactions. Tamas is heavy and withdrawn, the fog that arrives when we are tired or stuck. Each has a place; balance is the practice.'],
+        ['q', 'You do not have to fight a restless mind. You can simply give it somewhere gentle to land.'],
+        ['f', '1490645935967-10de6ba17061', 'A quiet moment with warm herbs', 'Stillness gives the mind a reference point.'],
+        ['h', 'Working with what is here'],
+        ['p', 'When rajas is high, slow the breath and reduce stimulation. When tamas is heavy, seek light, movement and warm food. When sattva is present, protect it with a few minutes of silence before the day asks for more.']
+      ],
+      takeaways: ['The three gunas describe qualities of mind, not failures', 'Rajas needs slower breath and fewer inputs', 'Tamas responds to light, warmth and movement', 'Sattva is protected by small pockets of silence'],
+      tags: ['#MindAndRest', '#Gunas', '#Meditation', '#Awareness', '#Balance'],
+      homeTitle: 'Notice one quality today.', homeLead: 'A few minutes of honest noticing can change how you meet the rest of the day.',
+      steps: [['Pause', 'Stop for one breath and name what feels dominant.'], ['Respond gently', 'Slow down if restless; move if heavy.'], ['Keep a pocket of quiet', 'Protect five minutes without input.']],
+      cta: 'Find your stillness.', ctaText: 'Try a meditation and breath session with Meera, or speak to a guide first.',
+      related: ['breath-practice', 'sleep-healing', 'sunday-reset'],
+      meta: 'Read The three minds — a gentle introduction to sattva, rajas and tamas and how to work with each state.'
+    },
+    'sunday-reset': {
+      title: 'A Sunday reset for the whole family.', category: 'Seasonal', read: '5 min read', date: '01 February 2026', author: 'Devika Pillai',
+      hero: '1600612253971-422e7f7faeb6', heroAlt: 'Quiet home ritual', detail: '1506744038136-46273834b3fb', detailAlt: 'A calm home ritual with warm oil',
+      lead: 'A reset does not need to be a strict schedule or a long list of chores. One shared rhythm — a warm meal, a short walk, a quiet hour — can help a whole household arrive at Monday with more ease.',
+      body: [
+        ['p', 'Sundays often swing between overscheduling and doing nothing at all. Both can leave us strangely unrested. A simple ritual gives the day a shape without turning it into another task.'],
+        ['h', 'Begin with warmth'],
+        ['p', 'Cook something slow and shared. Lentils, rice and warmed spices ask very little of you and fill the home with a settling smell. Let the kitchen be the place where the day gathers.'],
+        ['q', 'A home reset is less about cleaning the house and more about clearing the atmosphere.'],
+        ['f', '1506744038136-46273834b3fb', 'A calm home ritual', 'One shared ritual can steady an entire household.'],
+        ['h', 'Keep the evening small'],
+        ['p', 'A short walk after food, warm oil on the feet and an early, dim hour before bed are enough. Children copy what they see far more than what they are told — let them watch the pace change.']
+      ],
+      takeaways: ['Give Sunday a gentle shape, not a strict plan', 'Cook one slow, shared meal', 'A short family walk settles everyone', 'Keep the last hour dim and unhurried'],
+      tags: ['#Seasonal', '#Family', '#HomeRitual', '#Rest', '#WeeklyReset'],
+      homeTitle: 'Reset without a schedule.', homeLead: 'Three small gestures can change the feeling of a whole home.',
+      steps: [['Cook something warm', 'Let one pot simmer slowly for the family.'], ['Step outside together', 'A ten-minute walk resets the atmosphere.'], ['Oil the feet', 'Warm oil and quiet voices close the day.']],
+      cta: 'Bring the ritual home.', ctaText: 'Ask our therapists for simple practices that suit your family routine.',
+      related: ['monsoon-energy', 'sleep-healing', 'daily-oiling'],
+      meta: 'Read A Sunday reset for the whole family — gentle home rituals, warm food and an unhurried end to the week.'
+    },
+    'breath-practice': {
+      title: 'A breath practice for busy minds.', category: 'Mind & rest', read: '4 min read', date: '26 January 2026', author: 'Meera Iyer',
+      hero: '1575052814086-f385e2e2ad1b', heroAlt: 'Morning meditation and breath practice', detail: '1490645935967-10de6ba17061', detailAlt: 'A quiet seated breath practice',
+      lead: 'When the mind is racing, telling it to calm down rarely works. The breath is a kinder doorway: already present, always moving, and gentle enough to follow without force.',
+      body: [
+        ['p', 'You do not need a cushion, an app or twenty spare minutes. Three slow cycles of breath, repeated a few times a day, can change the tone of a busy morning.'],
+        ['h', 'Make the exhale longer'],
+        ['p', 'Begin by noticing the breath as it is. Then let the out-breath become slightly longer than the in-breath. This simple shift signals safety to the nervous system and softens the drive to rush.'],
+        ['q', 'The breath does not need to be perfect. It only needs to be noticed.'],
+        ['f', '1490645935967-10de6ba17061', 'A quiet moment of breath and stillness', 'A few slow breaths can reset a crowded day.'],
+        ['h', 'Where to practice'],
+        ['p', 'Use the moments you already have: before opening your inbox, while water boils, at a red light. Small, frequent practices become familiar, and a familiar practice is the one that helps when stress is high.']
+      ],
+      takeaways: ['Follow the breath instead of fighting the mind', 'A longer exhale invites calm', 'Three cycles are enough to begin', 'Attach practice to moments already in your day'],
+      tags: ['#MindAndRest', '#Breath', '#Meditation', '#Stress', '#DailyRitual'],
+      homeTitle: 'Try three slow breaths.', homeLead: 'No equipment, no perfect posture — just a small pause you can repeat.',
+      steps: [['Notice', 'Feel one natural breath without changing it.'], ['Lengthen', 'Make the exhale a little slower than the inhale.'], ['Repeat', 'Do three cycles before your next task.']],
+      cta: 'Learn with a guide.', ctaText: 'Join a breath-led session and leave with a practice you can keep.',
+      related: ['three-minds', 'sleep-healing', 'daily-oiling'],
+      meta: 'Read A breath practice for busy minds — a simple longer-exhale technique for calmer days and a steadier nervous system.'
+    },
+    'abhyanga-oils': {
+      title: 'How we blend our Abhyanga oils.', category: 'Herbal wisdom', read: '5 min read', date: '18 January 2026', author: 'Kabir Nair',
+      hero: '1439405326854-014607f694d7', heroAlt: 'Herbal oils being blended', detail: '1600585152915-d208bec867a1', detailAlt: 'Warm herbal oil in a traditional vessel',
+      lead: 'Every Abhyanga oil at our center begins with a conversation: your constitution, the season, your sleep and how your body tends to hold tension. The blend that follows is simple, fresh and chosen for you.',
+      body: [
+        ['p', 'A good oil is not complicated, but it is specific. Sesame, coconut and almond each bring a different quality. Herbs are then added to support warmth, calm or circulation, depending on what the body needs.'],
+        ['h', 'The base matters'],
+        ['p', 'Sesame is warming and grounding, ideal for Vata and for cooler months. Coconut is cooling and calming, often better for Pitta or humid weather. Almond is gentle and nourishing, a quiet choice for sensitive skin.'],
+        ['q', 'The right oil does not announce itself. The body simply feels easier in it.'],
+        ['f', '1600585152915-d208bec867a1', 'Warm oil being prepared for therapy', 'Each blend starts with a base chosen for the person.'],
+        ['h', 'Freshly prepared, never generic'],
+        ['p', 'We prepare small batches so the herbs remain lively. Ashwagandha and brahmi for a settled mind, turmeric and neem for clarity, a little camphor when the senses need waking. Your therapist adjusts the oil again on the day of the session.']
+      ],
+      takeaways: ['Every blend starts with your constitution', 'Sesame warms, coconut cools, almond nourishes', 'Herbs are chosen for the season and the person', 'Small batches keep the oil lively'],
+      tags: ['#HerbalOils', '#Abhyanga', '#HerbalWisdom', '#Dosha', '#PersonalisedCare'],
+      homeTitle: 'Choose your oil with care.', homeLead: 'Notice how different bases feel before you settle on a daily ritual.',
+      steps: [['Warm a little', 'Rub a few drops between your palms.'], ['Notice the quality', 'Is it warming, cooling or deeply softening?' ], ['Ask a guide', 'Let us match the oil to your dosha and season.']],
+      cta: 'Meet your blend.', ctaText: 'Book an Abhyanga session and leave with a blend chosen for your body.',
+      related: ['daily-oiling', 'kindling-agni', 'kitchen-spices'],
+      meta: 'Read How we blend our Abhyanga oils — a behind-the-scenes look at constitution-led herbal oil blending.'
+    }
+  };
+
+  function initBlogDetails() {
+    if (!location.pathname.endsWith('blog-details.html')) return;
+    const slug = new URLSearchParams(location.search).get('post') || 'daily-oiling';
+    const data = blogDetails[slug] || blogDetails['daily-oiling'];
+    const author = blogAuthors[data.author] || blogAuthors['Dr. Ananya Sharma'];
+    const imgUrl = (id, width) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width || 1200}&q=80`;
+    const setText = (selector, value) => { const el = $(selector); if (el && value != null) el.textContent = value; };
+    const textIn = (root, selector, value) => { const el = $(selector, root); if (el && value != null) el.textContent = value; };
+    const setImg = (selector, id, alt, width) => { const img = $(selector); if (!img || !id) return; img.src = imgUrl(id, width); img.alt = alt; img.dataset.seed = id; };
+
+    document.title = `${data.title} | Journal | Ayurveda Wellness`;
+    const desc = $('meta[name="description"]'); if (desc) desc.content = data.meta;
+    const ogTitle = $('meta[property="og:title"]'); if (ogTitle) ogTitle.content = document.title;
+    const ogDesc = $('meta[property="og:description"]'); if (ogDesc) ogDesc.content = data.meta;
+
+    setText('.page-hero .eyebrow', `${data.category} · ${data.read}`);
+    setText('.page-hero h1', data.title);
+    setText('.hero-author .author-name', data.author);
+    setText('.date-meta span', data.date);
+    setText('.read-meta span', data.read);
+    setImg('.hero-author .author-avatar', author.img, data.author, 160);
+    setImg('.page-hero-art img', data.hero, data.heroAlt, 1920);
+
+    const article = $('.article-body');
+    if (article) {
+      article.innerHTML = `<p class="lead">${data.lead}</p>` + data.body.map(block => {
+        if (block[0] === 'h') return `<h3>${block[1]}</h3>`;
+        if (block[0] === 'q') return `<blockquote>${block[1]}</blockquote>`;
+        if (block[0] === 'f') return `<figure class="article-figure"><img src="${imgUrl(block[1], 1200)}" alt="${block[2]}" loading="lazy" decoding="async" data-seed="${block[1]}"><figcaption>${block[3]}</figcaption></figure>`;
+        return `<p>${block[1]}</p>`;
+      }).join('');
+    }
+
+    const widgets = $$('aside .side-widget');
+    if (widgets[0]) $$('li span', widgets[0]).forEach((el, i) => { if (data.takeaways[i]) el.textContent = data.takeaways[i]; });
+    if (widgets[1]) $$('.recent-post', widgets[1]).forEach((post, i) => {
+      const related = blogDetails[data.related[i]]; if (!related) return;
+      textIn(post, 'b', related.title);
+      const meta = $('span', post); if (meta) meta.textContent = related.read;
+      const img = $('img', post); if (img) { img.src = imgUrl(related.hero, 160); img.alt = related.heroAlt; img.dataset.seed = related.hero; }
+    });
+    if (widgets[2]) $$('.tag-cloud a', widgets[2]).forEach((el, i) => { if (data.tags[i]) el.textContent = data.tags[i]; el.href = 'blog.html'; });
+
+    const home = $('.grid.g-feature');
+    if (home) { textIn(home, '.eyebrow', 'Bring it home'); textIn(home, 'h2', data.homeTitle); textIn(home, 'p.lead', data.homeLead); }
+    setImg('.grid.g-feature .media.ratio-43 img', data.detail, data.detailAlt, 1200);
+    $$('.process-row').forEach((row, i) => { const step = data.steps[i]; if (!step) return; textIn(row, 'h4', step[0]); textIn(row, 'p', step[1]); });
+
+    setImg('.author-section .media-round', author.img, data.author, 180);
+    setText('.author-section .therapy-cat-label', 'Written by');
+    setText('.author-section h3', data.author);
+    setText('.author-section p.soft', author.bio);
+
+    const head = $('.section-head.center');
+    if (head) { textIn(head, '.eyebrow', 'Keep reading'); textIn(head, 'h2', 'More from the journal'); textIn(head, 'p.lead', 'Thoughtful guidance for the seasons of your life.'); }
+    $$('.keep-reading-grid .card').forEach((card, i) => {
+      const key = data.related[i]; const related = blogDetails[key]; if (!related) return;
+      const img = $('.card-img img', card); if (img) { img.src = imgUrl(related.hero, 1200); img.alt = related.heroAlt; img.dataset.seed = related.hero; }
+      textIn(card, '.therapy-cat-label', related.category);
+      textIn(card, 'h3', related.title);
+      const link = $('a.text-link', card); if (link) link.href = `blog-details.html?post=${key}`;
+    });
+
+    setText('.cta-band h2', data.cta);
+    setText('.cta-band p', data.ctaText);
+  }
+
   initTherapyDetails();
   initTherapyCards();
   initTherapistDetails();
+  initBlogDetails();
 
   /* ---------- Booking wizard ---------- */
   const wizard = $('#booking-modal');
