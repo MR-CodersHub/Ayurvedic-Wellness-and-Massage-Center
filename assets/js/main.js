@@ -157,10 +157,11 @@
 
   /* ---------- Tabs & filters ---------- */
   $$('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
-    const group = btn.closest('.tabs')?.dataset.tabs;
-    const wrap = group ? document.getElementById(group) : btn.parentElement.parentElement;
+    const tabs = btn.closest('.tabs');
+    const group = tabs?.dataset.tabs;
+    const wrap = group ? document.getElementById(group) : (tabs?.parentElement || btn.parentElement.parentElement);
     if (!wrap) return;
-    $$('.tab-btn', wrap).forEach(b => b.classList.toggle('active', b === btn));
+    $$('.tab-btn', tabs || document).forEach(b => b.classList.toggle('active', b === btn));
     $$('.tab-panel', wrap).forEach(p => p.classList.toggle('active', p.dataset.panel === btn.dataset.tab));
     initReveal();
   }));

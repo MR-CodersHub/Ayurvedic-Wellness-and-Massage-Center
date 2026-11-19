@@ -895,3 +895,31 @@
 .pricing-page .addons-grid .feature-card > p:not(.price) { min-height: 3em; margin: 8px 0 0; }
 .pricing-page .addons-grid .feature-card .price { margin-top: auto; padding-top: 18px; }
 
+/* ---------- Blog page ---------- */
+.blog-page .editor-pick { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); align-items: stretch; }
+.blog-page .editor-pick .editor-media { position: relative; min-height: 420px; overflow: hidden; }
+.blog-page .editor-pick .editor-media img { width: 100%; height: 100%; object-fit: cover; }
+.blog-page .editor-pick .editor-body { display: flex; flex-direction: column; justify-content: center; }
+.blog-page .editor-pick .editor-body .card-foot { margin-top: auto; }
+.blog-page .editor-pair, .blog-page .blog-grid { align-items: stretch; }
+.blog-page .blog-card { display: flex; flex-direction: column; height: 100%; }
+.blog-page .blog-card .card-img img { aspect-ratio: 16/10; }
+.blog-page .blog-card .card-body { display: flex; flex: 1; flex-direction: column; }
+.blog-page .blog-card .blog-excerpt { margin: 0; }
+.blog-page .blog-card .card-foot { margin-top: auto; padding-top: 16px; }
+.blog-page .healer-note-card { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.blog-page .blog-healer-grid { align-items: center; }
+
+@media (max-width: 900px) {
+  .blog-page .editor-pick { grid-template-columns: 1fr; }
+  .blog-page .editor-pick .editor-media { min-height: 280px; }
+}
+
+/* ---------- Blog detail page ---------- */
+.blog-details-page .page-hero .hero-meta-row { gap: 12px 22px; }
+.blog-details-page .page-hero .hero-author { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #FBF6EA; }
+.blog-details-page .page-hero .author-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid rgba(251, 246, 234, 0.7); }
+.blog-details-page .page-hero .hero-meta { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; color: rgba(244, 237, 224, 0.82); }
+.blog-details-page .page-hero .hero-meta svg { width: 15px; height: 15px; flex: none; }
+.blog-details-page .author-section { padding-block: clamp(20px, 3vw, 40px); }
+
