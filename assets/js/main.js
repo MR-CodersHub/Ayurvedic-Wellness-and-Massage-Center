@@ -635,8 +635,236 @@
     });
   }
 
+  const offer = (img, cat, name, desc, duration, tag, price, book, title, short) => ({ img, cat, name, desc, duration, tag, price, book, title, short });
+  const weekDay = (name, time, status, label) => ({ name, time, status, label });
+  const clientQuote = (text, img, name, role) => ({ text, img, name, role });
+  const focus = (title, text) => ({ title, text });
+
+  const therapistDetails = {
+    'ananya-sharma': {
+      name: 'Ananya Sharma', role: 'Senior Ayurvedic therapist', specialty: 'Abhyanga · Marma therapy · Panchakarma',
+      avatar: '1494790108377-be9c29b29330', heroBg: '1551836022-d5d88e9218df', storyImage: '1522071820081-009f0129c71c',
+      years: '14 years', rating: '4.9 / 5', therapies: '3 therapies', languages: 'EN / HI / MAL',
+      storyEyebrow: 'Her story', storyTitle: 'A healer guided by listening.',
+      intro: 'Ananya began her study of Ayurveda in the old family tradition of Thrissur, learning classical Abhyanga from her grandmother before formal training at the Kerala Ayurveda Academy. Fourteen years later, her hands remain as attentive as ever.',
+      note: 'She is known for an extraordinary sensitivity to tension — finding places the body has learned to hide. Her sessions are slow, deliberate and quietly transformative. She believes the best therapy is the one that leaves you feeling more at home in your own skin.',
+      credentials: ['Certified Senior Ayurvedic Therapist, Kerala Ayurveda Academy', 'Advanced Marma therapy training, Chennai lineage', 'Panchakarma specialist with hospital-based experience'],
+      expertiseEyebrow: 'Where she shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Ananya tailors her practice to what each guest truly needs.',
+      expertise: [focus('Abhyanga', 'Full-body warm oil therapy for deep nourishment and rest.'), focus('Marma therapy', 'Precise work on vital points to release held tension.'), focus('Panchakarma', 'Guided purification for lasting reset and renewal.'), focus('Stress & sleep', 'Grounding rituals for nervous system balance.')],
+      weekEyebrow: 'Her week', weekTitle: 'Availability & sessions.', weekLead: 'Ananya’s calendar fills quickly. Reserve your preferred slot in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '08:00 – 16:00', 'open', 'Open'), weekDay('Tuesday', '09:00 – 18:00', 'open', 'Open'), weekDay('Wednesday', '08:00 – 16:00', 'open', 'Open'), weekDay('Thursday', '09:00 – 18:00', 'open', 'Open'), weekDay('Friday', '08:00 – 14:00', 'open', 'Open'), weekDay('Saturday', '09:00 – 15:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The quiet confidence Ananya brings to every session.',
+      quotes: [clientQuote('Ananya found tension I had forgotten I was carrying. The release was immediate and the calm lasted for days.', '1600880292203-757bb62b4baf', 'Ritika Menon', 'Designer, Kochi'), clientQuote('She has a way of making the whole hour feel unhurried and completely yours. I book with her every time I visit.', '1531746020798-e6953c6e8e04', 'Thomas George', 'Writer, Dubai')],
+      bookEyebrow: 'Book with Ananya', bookTitle: 'Rituals she offers',
+      offerings: [offer('1556229010-6c3f2c9ca5f8', 'Full body', 'Abhyanga', 'Her signature warm-oil ritual for deep rest and renewal.', '90 min', 'Herbal', '₹4,800', 'Abhyanga', 'Abhyanga · 90 min', 'Full-body warm oil ritual'), offer('1612817288484-6f916006741a', 'Energy work', 'Marma Therapy', 'Focused pressure on vital points to restore natural flow.', '60 min', 'Herbal', '₹4,200', 'Marma Therapy', 'Marma therapy · 60 min', 'Focused energy-point work'), offer('1560448204-e02f11c3d0e2', 'Purification', 'Panchakarma Detox', 'A guided program to reset and restore balance.', '120 min', 'Herbal', '₹8,900', 'Panchakarma Detox', 'Panchakarma · 120 min', 'Guided cleansing program')],
+      ctaTitle: 'Reserve a session with Ananya.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Ananya Sharma, senior Ayurvedic therapist specializing in Abhyanga, Marma therapy and Panchakarma. Reserve a personalized session at our wellness center.'
+    },
+    'rohan-menon': {
+      name: 'Rohan Menon', role: 'Detox & herbal specialist', specialty: 'Panchakarma · Herbal medicine · Udvartana',
+      avatar: '1552058544-f2b08422138a', heroBg: '1595152452543-e5fc28ebc2b8', storyImage: '1595152452543-e5fc28ebc2b8',
+      years: '11 years', rating: '4.9 / 5', therapies: '3 therapies', languages: 'EN / HI / TAM',
+      storyEyebrow: 'His story', storyTitle: 'A steady guide to a deeper reset.',
+      intro: 'Rohan learned the discipline of Panchakarma in the classical hospitals of Kerala, where cleansing is treated as a careful conversation with the body rather than a quick fix. Eleven years on, he brings that same patience to every program he designs.',
+      note: 'He is especially attentive to digestion, sleep and the rhythms that quietly shape wellbeing. His sessions are measured and thoughtful, never rushed — the kind of care that keeps people coming back season after season.',
+      credentials: ['Certified Panchakarma therapist, Kerala Ayurveda Academy', 'Advanced herbal medicine training, Thrissur lineage', 'Hospital-based detox program specialist'],
+      expertiseEyebrow: 'Where he shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Rohan shapes each program around the constitution and pace of the person in front of him.',
+      expertise: [focus('Panchakarma', 'Guided cleansing programs that restore balance without harshness.'), focus('Herbal medicine', 'Personalised herbal blends to support digestion and renewal.'), focus('Udvartana', 'Herbal powder massage to stimulate circulation and lymphatic flow.'), focus('Digestive reset', 'Gentle rhythms and rituals for a settled, lighter body.')],
+      weekEyebrow: 'His week', weekTitle: 'Availability & sessions.', weekLead: 'Rohan’s cleansing programs need a little more planning. Reserve your preferred slot in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '09:00 – 18:00', 'open', 'Open'), weekDay('Tuesday', '09:00 – 20:00', 'open', 'Open'), weekDay('Wednesday', '09:00 – 18:00', 'open', 'Open'), weekDay('Thursday', '09:00 – 20:00', 'open', 'Open'), weekDay('Friday', '09:00 – 16:00', 'open', 'Open'), weekDay('Saturday', '10:00 – 17:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The steadiness Rohan brings to every session.',
+      quotes: [clientQuote('Rohan explained every step of the cleanse and made the whole process feel safe and clear. I came out lighter in body and mind.', '1547425260-76bcadfb4f2c', 'Sneha Krishnan', 'Teacher, Bengaluru'), clientQuote('His herbal blends and calm guidance made a real difference to my digestion and sleep. I finally feel like myself again.', '1521119989659-a83eee488004', 'Daniel Ross', 'Consultant, Chennai')],
+      bookEyebrow: 'Book with Rohan', bookTitle: 'Rituals he offers',
+      offerings: [offer('1560448204-e02f11c3d0e2', 'Cleanse', 'Panchakarma Detox', 'A guided reset with oils, herbs and close attention to digestion.', '120 min', 'Herbal', '₹8,900', 'Panchakarma Detox', 'Panchakarma · 120 min', 'Guided cleansing program'), offer('1531384441138-2736e62e0919', 'Herbal care', 'Herbal Consultation', 'A focused conversation and a blend chosen for your constitution.', '45 min', 'Personalised', '₹3,200', 'Herbal Consultation', 'Herbal consultation · 45 min', 'Constitution-led herbal guidance'), offer('1595152452543-e5fc28ebc2b8', 'Body work', 'Udvartana', 'Herbal powder massage to stimulate flow and refresh the skin.', '60 min', 'Herbal', '₹4,500', 'Udvartana', 'Udvartana · 60 min', 'Herbal powder massage')],
+      ctaTitle: 'Reserve a session with Rohan.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Rohan Menon, Panchakarma and herbal specialist. Explore his cleansing programs and reserve a personalized session at our wellness center.'
+    },
+    'meera-iyer': {
+      name: 'Meera Iyer', role: 'Shirodhara & meditation therapist', specialty: 'Shirodhara · Meditation · Abhyanga',
+      avatar: '1568602471122-7832951cc4c5', heroBg: '1608248543803-ba4f8c70ae0b', storyImage: '1608248543803-ba4f8c70ae0b',
+      years: '9 years', rating: '4.9 / 5', therapies: '3 therapies', languages: 'EN / HI / TAM',
+      storyEyebrow: 'Her story', storyTitle: 'Stillness, poured slowly.',
+      intro: 'Meera came to Shirodhara after years of studying meditation and the nervous system. She sees the steady stream of warm oil as an invitation — a way to give a restless mind something gentle to follow until it finally rests.',
+      note: 'Her sessions are quiet and unhurried, with simple breath guidance woven in. Guests often describe the experience as the deepest sleep they have had in years.',
+      credentials: ['Certified Shirodhara therapist, Kerala Ayurveda Academy', 'Meditation facilitator, Vipassana tradition', 'Advanced Abhyanga training, Mysore lineage'],
+      expertiseEyebrow: 'Where she shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Meera works gently with the nervous system, giving busy minds a chance to settle.',
+      expertise: [focus('Shirodhara', 'A steady stream of warm oil to quiet the mind and invite deep rest.'), focus('Meditation & breath', 'Simple guidance to soften mental chatter and find stillness.'), focus('Stress & sleep', 'Unhurried rituals for exhaustion, restlessness and mental fatigue.'), focus('Abhyanga', 'Warm, rhythmic oil work that grounds the whole body.')],
+      weekEyebrow: 'Her week', weekTitle: 'Availability & sessions.', weekLead: 'Meera’s quiet sessions are in high demand. Reserve your preferred slot in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '08:00 – 15:00', 'open', 'Open'), weekDay('Tuesday', '10:00 – 18:00', 'open', 'Open'), weekDay('Wednesday', '08:00 – 15:00', 'open', 'Open'), weekDay('Thursday', '10:00 – 18:00', 'open', 'Open'), weekDay('Friday', '08:00 – 14:00', 'open', 'Open'), weekDay('Saturday', '09:00 – 16:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The unhurried calm Meera creates in every session.',
+      quotes: [clientQuote('The Shirodhara felt like someone finally gave my mind permission to rest. Meera’s voice and pacing were exactly right.', '1544005313-94ddf0286df2', 'Priya Nambiar', 'Architect, Kochi'), clientQuote('I sleep better for days after seeing Meera. Her meditation guidance is simple, warm and surprisingly powerful.', '1524504388940-b1c1722653e1', 'Aparna Das', 'Journalist, Bengaluru')],
+      bookEyebrow: 'Book with Meera', bookTitle: 'Rituals she offers',
+      offerings: [offer('1608248543803-ba4f8c70ae0b', 'Mind & body', 'Shirodhara', 'Warm oil poured in a steady stream to settle the mind.', '75 min', 'Signature', '₹5,400', 'Shirodhara', 'Shirodhara · 75 min', 'Warm oil pouring ritual'), offer('1595152452543-e5fc28ebc2b8', 'Stillness', 'Meditation & breath', 'Gentle breath-led guidance for a quieter mind.', '60 min', 'Guided', '₹3,200', 'Meditation', 'Meditation & breath · 60 min', 'Breath-led grounding'), offer('1556229010-6c3f2c9ca5f8', 'Full body', 'Abhyanga', 'Rhythmic warm oil work for grounding and rest.', '90 min', 'Herbal', '₹4,800', 'Abhyanga', 'Abhyanga · 90 min', 'Full-body warm oil ritual')],
+      ctaTitle: 'Reserve a session with Meera.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Meera Iyer, Shirodhara and meditation therapist. Reserve a calm, restorative session at our Ayurvedic wellness center.'
+    },
+    'kabir-nair': {
+      name: 'Kabir Nair', role: 'Herbalist & therapist', specialty: 'Udvartana · Nasya · Herbal medicine',
+      avatar: '1500648767791-00dcc994a43e', heroBg: '1531384441138-2736e62e0919', storyImage: '1531384441138-2736e62e0919',
+      years: '12 years', rating: '4.8 / 5', therapies: '3 therapies', languages: 'EN / HI / MAL',
+      storyEyebrow: 'His story', storyTitle: 'Where herbs meet skilled hands.',
+      intro: 'Kabir trained as a herbalist before he trained as a therapist, and it shows. He blends powders and oils fresh for each guest, choosing ingredients for the season, the constitution and the body in front of him.',
+      note: 'His Udvartana and Nasya sessions are brisk where they need to be and gentle where they matter. He has a calm, quiet way of making even a first visit feel familiar.',
+      credentials: ['Diploma in Ayurvedic herbalism, Kerala', 'Certified Udvartana & Nasya therapist', 'Twelve years of clinical herbal practice'],
+      expertiseEyebrow: 'Where he shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Kabir pairs fresh herbal blends with precise bodywork for a clear, grounded reset.',
+      expertise: [focus('Udvartana', 'Herbal powder massage to stimulate circulation and lymphatic flow.'), focus('Nasya', 'Medicated drops and facial work to clear the senses.'), focus('Herbal blends', 'Freshly chosen powders and oils for your constitution.'), focus('Detox & steam', 'Warming rituals that support a lighter, clearer body.')],
+      weekEyebrow: 'His week', weekTitle: 'Availability & sessions.', weekLead: 'Kabir’s diary fills quickly through the week. Reserve your preferred slot in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '09:00 – 17:00', 'open', 'Open'), weekDay('Tuesday', '09:00 – 17:00', 'open', 'Open'), weekDay('Wednesday', '09:00 – 17:00', 'open', 'Open'), weekDay('Thursday', '10:00 – 19:00', 'open', 'Open'), weekDay('Friday', '09:00 – 15:00', 'open', 'Open'), weekDay('Saturday', '09:00 – 16:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The herbal knowledge and steady touch Kabir brings to his work.',
+      quotes: [clientQuote('Kabir explained exactly why he chose each herb. The Udvartana was invigorating and I left feeling lighter and clearer.', '1600880292203-757bb62b4baf', 'Nikhil Rao', 'Engineer, Hyderabad'), clientQuote('The Nasya session was surprisingly gentle and made such a difference to my sinus comfort. I will definitely be back.', '1531746020798-e6953c6e8e04', 'Farah Khan', 'Writer, Mumbai')],
+      bookEyebrow: 'Book with Kabir', bookTitle: 'Rituals he offers',
+      offerings: [offer('1595152452543-e5fc28ebc2b8', 'Body work', 'Udvartana', 'Herbal powder massage to stimulate flow and refresh the skin.', '60 min', 'Herbal', '₹4,500', 'Udvartana', 'Udvartana · 60 min', 'Herbal powder massage'), offer('1612817288484-6f916006741a', 'Senses', 'Nasya', 'Medicated drops and gentle facial work to clear the head.', '30 min', 'Herbal', '₹2,400', 'Nasya', 'Nasya · 30 min', 'Herbal nasal therapy'), offer('1531384441138-2736e62e0919', 'Warmth', 'Herbal Steam', 'A medicated steam ritual to soften and release tension.', '45 min', 'Herbal', '₹3,000', 'Herbal Steam', 'Herbal steam · 45 min', 'Medicated steam ritual')],
+      ctaTitle: 'Reserve a session with Kabir.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Kabir Nair, herbalist and therapist specializing in Udvartana, Nasya and herbal medicine. Reserve a session at our wellness center.'
+    },
+    'devika-pillai': {
+      name: 'Devika Pillai', role: 'Wellness therapist', specialty: 'Pada Abhyanga · Pregnancy care · Abhyanga',
+      avatar: '1531123897727-8f129e1688ce', heroBg: '1556229010-6c3f2c9ca5f8', storyImage: '1556229010-6c3f2c9ca5f8',
+      years: '7 years', rating: '4.9 / 5', therapies: '3 therapies', languages: 'EN / HI / MAL',
+      storyEyebrow: 'Her story', storyTitle: 'Grounding, one step at a time.',
+      intro: 'Devika found her way to Ayurveda through pregnancy care, where the smallest comfort can change an entire day. Her Pada Abhyanga rituals are slow, warm and deliberately grounding.',
+      note: 'She is known for making guests feel completely at ease — especially those arriving tired, unsettled or in a season of change. Every session ends with a little more steadiness.',
+      credentials: ['Certified wellness therapist, Kerala Ayurveda Academy', 'Pregnancy care specialist', 'Advanced Pada Abhyanga training'],
+      expertiseEyebrow: 'Where she shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Devika’s work is gentle, steady and especially comforting for tired bodies and busy minds.',
+      expertise: [focus('Pada Abhyanga', 'Warm, grounding foot and lower-leg oil massage.'), focus('Pregnancy care', 'Comforting, careful rituals for changing bodies.'), focus('Abhyanga', 'Full-body oil work for rest and renewal.'), focus('Rest & grounding', 'Slow sessions for the nervous system to settle.')],
+      weekEyebrow: 'Her week', weekTitle: 'Availability & sessions.', weekLead: 'Devika’s sessions are popular, and a few slots are already reserved. Reserve your preferred time in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '08:00 – 14:00', 'open', 'Open'), weekDay('Tuesday', '09:00 – 16:00', 'open', 'Open'), weekDay('Wednesday', '08:00 – 14:00', 'open', 'Open'), weekDay('Thursday', '09:00 – 16:00', 'open', 'Open'), weekDay('Friday', '08:00 – 13:00', 'open', 'Open'), weekDay('Saturday', '09:00 – 15:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The warmth and steadiness Devika brings to every session.',
+      quotes: [clientQuote('Devika made me feel so comfortable during my pregnancy. Her foot ritual was exactly the comfort I needed each week.', '1544005313-94ddf0286df2', 'Anjali Menon', 'Teacher, Kochi'), clientQuote('I arrived exhausted and left feeling genuinely grounded. There is something wonderfully calm about the way she works.', '1524504388940-b1c1722653e1', 'Rhea Thomas', 'Designer, Chennai')],
+      bookEyebrow: 'Book with Devika', bookTitle: 'Rituals she offers',
+      offerings: [offer('1556229010-6c3f2c9ca5f8', 'Grounding', 'Pada Abhyanga', 'Warm, rhythmic oil work for the feet and lower legs.', '45 min', 'Signature', '₹3,200', 'Pada Abhyanga', 'Pada Abhyanga · 45 min', 'Warm foot oil ritual'), offer('1608248543803-ba4f8c70ae0b', 'Care', 'Pregnancy Care', 'A gentle, carefully paced ritual for changing bodies.', '60 min', 'Gentle', '₹4,200', 'Pregnancy Care', 'Pregnancy care · 60 min', 'Comforting care ritual'), offer('1595152452543-e5fc28ebc2b8', 'Full body', 'Abhyanga', 'Full-body warm oil therapy for deep rest.', '90 min', 'Herbal', '₹4,800', 'Abhyanga', 'Abhyanga · 90 min', 'Full-body warm oil ritual')],
+      ctaTitle: 'Reserve a session with Devika.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Devika Pillai, wellness therapist specializing in Pada Abhyanga and pregnancy care. Reserve a gentle session at our wellness center.'
+    },
+    'arjun-varma': {
+      name: 'Arjun Varma', role: 'Senior therapist & sound healer', specialty: 'Abhyanga · Sound therapy · Marma therapy',
+      avatar: '1599566150163-29194dcaad36', heroBg: '1560448204-e02f11c3d0e2', storyImage: '1560448204-e02f11c3d0e2',
+      years: '10 years', rating: '4.8 / 5', therapies: '3 therapies', languages: 'EN / HI / TAM',
+      storyEyebrow: 'His story', storyTitle: 'Rhythm, oil and deep rest.',
+      intro: 'Arjun began with Abhyanga and gradually wove sound into his practice, drawn by the way a single steady tone can soften a room. His sessions pair confident bodywork with a carefully chosen soundscape.',
+      note: 'He works especially well with guests who carry stress in the shoulders and jaw. The result is unhurried, tactile and often surprisingly emotional — in the best way.',
+      credentials: ['Certified Senior Ayurvedic Therapist, Kerala', 'Sound therapy facilitator', 'Advanced Marma training, Chennai lineage'],
+      expertiseEyebrow: 'Where he shines', expertiseTitle: 'Areas of expertise', expertiseLead: 'Arjun layers warm oil, precise pressure and steady sound into a deeply restorative ritual.',
+      expertise: [focus('Abhyanga', 'Confident, rhythmic full-body oil work for tension and rest.'), focus('Sound therapy', 'Carefully chosen tones that carry the body into stillness.'), focus('Marma therapy', 'Focused pressure to release held tension and restore flow.'), focus('Stress release', 'Grounding work for tight shoulders, jaws and busy minds.')],
+      weekEyebrow: 'His week', weekTitle: 'Availability & sessions.', weekLead: 'Arjun’s evening slots go quickly. Reserve your preferred time in advance, or let us find the next opening that suits you.',
+      schedule: [weekDay('Monday', '09:00 – 17:00', 'open', 'Open'), weekDay('Tuesday', '11:00 – 20:00', 'open', 'Open'), weekDay('Wednesday', '09:00 – 17:00', 'open', 'Open'), weekDay('Thursday', '11:00 – 20:00', 'open', 'Open'), weekDay('Friday', '09:00 – 15:00', 'open', 'Open'), weekDay('Saturday', '10:00 – 18:00', 'open', 'Open'), weekDay('Sunday', 'Rest day', 'rest', 'Closed')],
+      quoteEyebrow: 'Client words', quoteTitle: 'In capable hands', quoteLead: 'The rhythm and depth Arjun brings to every session.',
+      quotes: [clientQuote('The combination of Abhyanga and sound was unlike anything I have tried. I felt completely unwound afterwards.', '1547425260-76bcadfb4f2c', 'Meera Krishnan', 'Doctor, Kochi'), clientQuote('Arjun found every place I was holding stress. Strong, steady work and the calmest finish.', '1521119989659-a83eee488004', 'Vikram Shetty', 'Founder, Mangaluru')],
+      bookEyebrow: 'Book with Arjun', bookTitle: 'Rituals he offers',
+      offerings: [offer('1556229010-6c3f2c9ca5f8', 'Full body', 'Abhyanga', 'Rhythmic warm oil work that releases deep tension.', '90 min', 'Signature', '₹4,800', 'Abhyanga', 'Abhyanga · 90 min', 'Full-body warm oil ritual'), offer('1560448204-e02f11c3d0e2', 'Sound & oil', 'Sound & Oil Ceremony', 'Warm oil and steady tones for a slower, softer state.', '90 min', 'Signature', '₹6,500', 'Sound Oil Ceremony', 'Sound & oil ceremony · 90 min', 'Oil work with sound'), offer('1612817288484-6f916006741a', 'Energy work', 'Marma Therapy', 'Focused pressure on vital points to restore flow.', '60 min', 'Clinical', '₹4,200', 'Marma Therapy', 'Marma therapy · 60 min', 'Focused energy-point work')],
+      ctaTitle: 'Reserve a session with Arjun.', ctaText: 'Choose your ritual, date and preferred time in a few simple steps.',
+      meta: 'Meet Arjun Varma, senior therapist and sound healer specializing in Abhyanga and sound therapy. Reserve a session at our wellness center.'
+    }
+  };
+
+  let activeTherapistName = '';
+
+  function initTherapistDetails() {
+    if (!location.pathname.endsWith('therapist-details.html')) return;
+    const slug = new URLSearchParams(location.search).get('therapist') || 'ananya-sharma';
+    const data = therapistDetails[slug] || therapistDetails['ananya-sharma'];
+    activeTherapistName = data.name;
+    const setText = (selector, value) => { const el = $(selector); if (el && value != null) el.textContent = value; };
+    const textIn = (root, selector, value) => { const el = $(selector, root); if (el && value != null) el.textContent = value; };
+    const setImg = (selector, id, alt, width) => {
+      const img = $(selector); if (!img || !id) return;
+      img.src = `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width || 1200}&q=80`;
+      img.alt = alt; img.dataset.seed = id;
+    };
+    const setPrice = (root, value) => { const el = $('.price', root); if (el) el.firstChild.textContent = value; };
+
+    document.title = `${data.name} — Therapist Profile | Ayurveda Wellness & Massage Center`;
+    const desc = $('meta[name="description"]'); if (desc) desc.content = data.meta;
+    const ogTitle = $('meta[property="og:title"]'); if (ogTitle) ogTitle.content = `${data.name} — Therapist Profile | Ayurveda Wellness`;
+    const ogDesc = $('meta[property="og:description"]'); if (ogDesc) ogDesc.content = data.meta;
+
+    setImg('.detail-hero-bg img', data.heroBg, `${data.name} wellness atmosphere`, 1920);
+    setImg('.therapist-avatar-lg', data.avatar, data.name, 200);
+    setText('.detail-hero .eyebrow', data.role);
+    setText('.detail-hero h1', data.name);
+    setText('.detail-hero .lead', data.specialty);
+
+    const facts = [[data.years, 'Of practice'], [data.rating, 'Guest rating'], [data.therapies, 'Core specialties'], [data.languages, 'Languages']];
+    $$('.detail-fact').forEach((el, i) => { if (!facts[i]) return; textIn(el, 'b', facts[i][0]); textIn(el, 'span', facts[i][1]); });
+
+    setImg('.media.ratio-43 img', data.storyImage, `${data.name} with client`, 1200);
+    setText('.split-copy .eyebrow', data.storyEyebrow);
+    setText('.split-copy h2', data.storyTitle);
+    setText('.split-copy > p.lead', data.intro);
+    setText('.split-copy > p.soft', data.note);
+    $$('.split-copy .check-list li span').forEach((el, i) => { if (data.credentials[i]) el.textContent = data.credentials[i]; });
+
+    const heads = $$('.section-head.center');
+    const setHead = (i, eyebrow, title, lead) => {
+      const el = heads[i]; if (!el) return;
+      textIn(el, '.eyebrow', eyebrow); textIn(el, 'h2', title); textIn(el, 'p.lead', lead);
+    };
+    setHead(0, data.expertiseEyebrow, data.expertiseTitle, data.expertiseLead);
+    setHead(1, data.quoteEyebrow, data.quoteTitle, data.quoteLead);
+    setHead(2, data.bookEyebrow, data.bookTitle, 'Choose a session and reserve a time that works for you.');
+
+    $$('.grid.g4 .feature-card').forEach((card, i) => { const item = data.expertise[i]; if (!item) return; textIn(card, 'h3', item.title); textIn(card, 'p', item.text); });
+
+    const weekGrid = $$('.grid.g-feature')[1];
+    if (weekGrid) {
+      textIn(weekGrid, '.eyebrow', data.weekEyebrow);
+      textIn(weekGrid, 'h2', data.weekTitle);
+      textIn(weekGrid, 'p.lead', data.weekLead);
+    }
+    const weekPanel = $('.week-panel');
+    if (weekPanel) textIn(weekPanel, '.week-head p', `${data.name}’s regular hours`);
+    $$('.week-grid .week-day').forEach((el, i) => {
+      const item = data.schedule[i]; if (!item) return;
+      textIn(el, '.week-name', item.name);
+      textIn(el, 'b', item.time);
+      textIn(el, '.week-status', item.label);
+      el.classList.toggle('open', item.status === 'open');
+      el.classList.toggle('rest', item.status === 'rest');
+    });
+
+    $$('.session-card').forEach((card, i) => {
+      const item = data.offerings[i]; if (!item) return;
+      textIn(card, 'h4', item.title);
+      textIn(card, 'p.muted', item.short);
+      setPrice(card, item.price);
+      const btn = $('[data-book]', card); if (btn) btn.dataset.book = item.book;
+    });
+
+    $$('.quote-card').forEach((card, i) => {
+      const item = data.quotes[i]; if (!item) return;
+      textIn(card, '.quote-text', item.text);
+      const img = $('.quote-author img', card);
+      if (img) {
+        img.src = `https://images.unsplash.com/photo-${item.img}?auto=format&fit=crop&w=160&q=80`;
+        img.alt = item.name; img.dataset.seed = item.img;
+      }
+      textIn(card, '.quote-author b', item.name);
+      textIn(card, '.quote-author span', item.role);
+    });
+
+    $$('.book-grid .therapy-card').forEach((card, i) => {
+      const item = data.offerings[i]; if (!item) return;
+      const img = $('.card-img img', card);
+      if (img) {
+        img.src = `https://images.unsplash.com/photo-${item.img}?auto=format&fit=crop&w=1200&q=80`;
+        img.alt = `${item.name} therapy session`; img.dataset.seed = item.img;
+      }
+      textIn(card, '.therapy-cat-label', item.cat);
+      textIn(card, '.card-body > p:not(.therapy-cat-label)', item.desc);
+      const metas = $$('.card-meta span', card);
+      if (metas[0]) metas[0].lastChild.textContent = ` ${item.duration}`;
+      if (metas[1]) metas[1].lastChild.textContent = ` ${item.tag}`;
+      setPrice(card, item.price);
+      const btn = $('[data-book]', card); if (btn) btn.dataset.book = item.book;
+    });
+
+    setText('.cta-band h2', data.ctaTitle);
+    setText('.cta-band p', data.ctaText);
+  }
+
   initTherapyDetails();
   initTherapyCards();
+  initTherapistDetails();
 
   /* ---------- Booking wizard ---------- */
   const wizard = $('#booking-modal');
@@ -675,6 +903,7 @@
     if (!wizard) return;
     wizardState = { therapy, date: '', time: '', therapist: '' };
     if (therapy) selectOpt('therapy', therapy);
+    if (activeTherapistName) selectOpt('therapist', activeTherapistName);
     calMonth = new Date().getMonth(); calYear = new Date().getFullYear();
     goStep(0); buildCalendar();
     wizard.classList.add('open'); document.body.classList.add('no-scroll');
