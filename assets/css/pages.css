@@ -878,3 +878,20 @@
   .therapist-details-page .week-day.rest { grid-column: auto; }
   .therapist-details-page .week-day { padding: 12px 14px; }
 }
+
+/* ---------- Pricing page ---------- */
+.pricing-page .rhythm-grid { align-items: stretch; }
+.pricing-page .rhythm-grid .price-card { display: flex; flex-direction: column; height: 100%; transform: none; }
+.pricing-page .rhythm-grid .price-card > .h3 { min-height: 2em; margin-bottom: 0; }
+.pricing-page .rhythm-grid .price-card > p { min-height: 3.2em; margin: 8px 0 0; }
+.pricing-page .rhythm-grid .price-card .price { margin: 18px 0; }
+.pricing-page .rhythm-grid .price-card ul { flex: 1 1 auto; align-content: start; margin: 0 0 26px; }
+.pricing-page .rhythm-grid .price-card > button { width: 100%; margin-top: auto; }
+
+.pricing-page .addons-grid { align-items: stretch; }
+.pricing-page .addons-grid .feature-card { display: flex; flex-direction: column; height: 100%; }
+.pricing-page .addons-grid .feature-card .feature-icon { flex: none; }
+.pricing-page .addons-grid .feature-card h3 { min-height: 2em; margin-bottom: 0; }
+.pricing-page .addons-grid .feature-card > p:not(.price) { min-height: 3em; margin: 8px 0 0; }
+.pricing-page .addons-grid .feature-card .price { margin-top: auto; padding-top: 18px; }
+
